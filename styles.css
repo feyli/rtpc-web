@@ -1,0 +1,22 @@
+body {
+    background: #F0F0F0;
+    margin: 0;
+    padding: 0;
+}
+
+#container {
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+}
+
+#container * {
+    height: 100%;
+    flex: 1;
+}
+
+#blocklyDiv {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
