@@ -1,0 +1,36 @@
+{
+    "id": "8af35a7d-838c-43aa-a800-f53a96895403",
+    "sceneType": "PREFAB",
+    "settings": {
+        "exportClass": true,
+        "autoImport": true,
+        "importFileExtension": true,
+        "preloadMethodName": "",
+        "preloadPackFiles": [],
+        "createMethodName": "",
+        "borderWidth": 320,
+        "borderHeight": 240
+    },
+    "displayList": [
+        {
+            "type": "Sprite",
+            "id": "4db998d5-5141-4a81-860f-fed52bba322c",
+            "label": "enemy_death",
+            "texture": {
+                "key": "atlas",
+                "frame": "enemy-death/enemy-death-1"
+            },
+            "x": 148,
+            "y": 98,
+            "animationPlayMethod": 1,
+            "animationKey": "enemy-death"
+        }
+    ],
+    "plainObjects": [],
+    "meta": {
+        "app": "Phaser Editor - Scene Editor",
+        "url": "https://phaser.io/editor",
+        "contentType": "phasereditor2d.core.scene.SceneContentType",
+        "version": 5
+    }
+}

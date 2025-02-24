@@ -1,0 +1,44 @@
+{
+    "id": "08a8da85-acb7-418a-8f4f-759e5e7ae83e",
+    "sceneType": "PREFAB",
+    "settings": {
+        "exportClass": true,
+        "autoImport": true,
+        "importFileExtension": true,
+        "preloadMethodName": "",
+        "preloadPackFiles": [],
+        "createMethodName": "",
+        "borderWidth": 320,
+        "borderHeight": 240
+    },
+    "displayList": [
+        {
+            "type": "Sprite",
+            "id": "3977a8cb-49a5-440c-8473-edc1c5feb3e1",
+            "label": "star",
+            "texture": {
+                "key": "atlas",
+                "frame": "star/star-1"
+            },
+            "x": 150,
+            "y": 97,
+            "ArcadeComponent.active": true,
+            "body.gravity.y": 500,
+            "body.drag.x": 10,
+            "body.drag.y": 10,
+            "body.bounce.x": 0.8,
+            "body.bounce.y": 0.8,
+            "body.width": 13,
+            "body.height": 13,
+            "animationPlayMethod": 1,
+            "animationKey": "star"
+        }
+    ],
+    "plainObjects": [],
+    "meta": {
+        "app": "Phaser Editor - Scene Editor",
+        "url": "https://phaser.io/editor",
+        "contentType": "phasereditor2d.core.scene.SceneContentType",
+        "version": 5
+    }
+}

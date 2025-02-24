@@ -1,0 +1,163 @@
+{
+    "section1": {
+        "files": [
+            {
+                "url": "assets/animations.json",
+                "type": "animation",
+                "key": "animations"
+            },
+            {
+                "atlasURL": "assets/atlas/atlas.json",
+                "textureURL": "assets/atlas/atlas.png",
+                "type": "atlas",
+                "key": "atlas"
+            },
+            {
+                "atlasURL": "assets/atlas/atlas-props.json",
+                "textureURL": "assets/atlas/atlas-props.png",
+                "type": "atlas",
+                "key": "atlas-props"
+            },
+            {
+                "url": "assets/environment/background.png",
+                "type": "image",
+                "key": "background"
+            },
+            {
+                "url": [
+                    "assets/sound/carrot.mp3"
+                ],
+                "type": "audio",
+                "key": "carrot"
+            },
+            {
+                "url": [
+                    "assets/sound/chest.mp3"
+                ],
+                "type": "audio",
+                "key": "chest"
+            },
+            {
+                "url": "assets/environment/collisions.png",
+                "frameConfig": {
+                    "frameWidth": 16,
+                    "frameHeight": 16,
+                    "startFrame": 0,
+                    "endFrame": -1,
+                    "spacing": 0,
+                    "margin": 0
+                },
+                "type": "spritesheet",
+                "key": "collisions"
+            },
+            {
+                "url": "assets/sprites/credits-text.png",
+                "type": "image",
+                "key": "credits-text"
+            },
+            {
+                "url": "assets/dino.png",
+                "key": "dino",
+                "type": "image"
+            },
+            {
+                "url": [
+                    "assets/sound/enchanted_forest.mp3"
+                ],
+                "type": "audio",
+                "key": "music"
+            },
+            {
+                "url": [
+                    "assets/sound/enemy-death.mp3"
+                ],
+                "type": "audio",
+                "key": "enemy-death"
+            },
+            {
+                "url": "assets/sprites/game-over.png",
+                "type": "image",
+                "key": "game-over"
+            },
+            {
+                "url": "assets/sprites/hud.png",
+                "frameConfig": {
+                    "frameWidth": 56,
+                    "frameHeight": 11,
+                    "startFrame": 0,
+                    "endFrame": -1,
+                    "spacing": 0,
+                    "margin": 0
+                },
+                "type": "spritesheet",
+                "key": "hud"
+            },
+            {
+                "url": [
+                    "assets/sound/hurt.mp3"
+                ],
+                "type": "audio",
+                "key": "hurt"
+            },
+            {
+                "url": "assets/sprites/instructions.png",
+                "type": "image",
+                "key": "instructions"
+            },
+            {
+                "url": [
+                    "assets/sound/jump.mp3"
+                ],
+                "type": "audio",
+                "key": "jump"
+            },
+            {
+                "url": "assets/sprites/loading.png",
+                "type": "image",
+                "key": "loading"
+            },
+            {
+                "url": "assets/environment/middleground.png",
+                "type": "image",
+                "key": "middleground"
+            },
+            {
+                "url": "assets/sprites/press-enter-text.png",
+                "type": "image",
+                "key": "press-enter-text"
+            },
+            {
+                "url": [
+                    "assets/sound/star.mp3"
+                ],
+                "type": "audio",
+                "key": "star"
+            },
+            {
+                "url": "assets/environment/tileset.png",
+                "frameConfig": {
+                    "frameWidth": 16,
+                    "frameHeight": 16,
+                    "startFrame": 0,
+                    "endFrame": -1,
+                    "spacing": 0,
+                    "margin": 0
+                },
+                "type": "spritesheet",
+                "key": "tileset"
+            },
+            {
+                "url": "assets/sprites/title-screen.png",
+                "type": "image",
+                "key": "title-screen"
+            }
+        ]
+    },
+    "meta": {
+        "app": "Phaser Editor 2D - Asset Pack Editor",
+        "contentType": "phasereditor2d.pack.core.AssetContentType",
+        "url": "https://phasereditor2d.com",
+        "version": 2,
+        "showAllFilesInBlocks": false
+    }
+}

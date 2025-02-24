@@ -1,0 +1,40 @@
+{
+    "id": "3d1a44de-031d-4659-8aea-bca62d81360b",
+    "sceneType": "PREFAB",
+    "settings": {
+        "exportClass": true,
+        "autoImport": true,
+        "importFileExtension": true,
+        "preloadMethodName": "",
+        "preloadPackFiles": [],
+        "createMethodName": "",
+        "borderWidth": 320,
+        "borderHeight": 240
+    },
+    "displayList": [
+        {
+            "type": "Sprite",
+            "id": "2737b4b5-6ce0-41e3-b9ce-b0241770f407",
+            "label": "piranha_plant",
+            "texture": {
+                "key": "atlas",
+                "frame": "piranha-plant/piranha-plant-1"
+            },
+            "x": 199,
+            "y": 133.5,
+            "ArcadeComponent.active": true,
+            "body.width": 60,
+            "body.height": 29,
+            "body.offset.y": 16,
+            "animationPlayMethod": 1,
+            "animationKey": "piranha-plant"
+        }
+    ],
+    "plainObjects": [],
+    "meta": {
+        "app": "Phaser Editor - Scene Editor",
+        "url": "https://phaser.io/editor",
+        "contentType": "phasereditor2d.core.scene.SceneContentType",
+        "version": 5
+    }
+}

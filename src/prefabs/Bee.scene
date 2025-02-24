@@ -1,0 +1,63 @@
+{
+    "id": "d154bf6f-b260-4a2b-8bf8-c0763c997672",
+    "sceneType": "PREFAB",
+    "settings": {
+        "exportClass": true,
+        "autoImport": true,
+        "importFileExtension": true,
+        "preloadMethodName": "",
+        "preloadPackFiles": [],
+        "createMethodName": "",
+        "borderWidth": 320,
+        "borderHeight": 240
+    },
+    "displayList": [
+        {
+            "type": "Sprite",
+            "id": "7cccd962-6c52-46e6-8b58-a0e0f78e06b5",
+            "label": "bee",
+            "texture": {
+                "key": "atlas",
+                "frame": "bee/bee-1"
+            },
+            "x": 161,
+            "y": 101,
+            "ArcadeComponent.active": true,
+            "body.width": 15,
+            "body.height": 18,
+            "body.offset.x": 11,
+            "body.offset.y": 13,
+            "animationPlayMethod": 1,
+            "animationKey": "bee"
+        }
+    ],
+    "plainObjects": [],
+    "meta": {
+        "app": "Phaser Editor - Scene Editor",
+        "url": "https://phaser.io/editor",
+        "contentType": "phasereditor2d.core.scene.SceneContentType",
+        "version": 5
+    },
+    "prefabProperties": [
+        {
+            "name": "distance",
+            "label": "Distance",
+            "tooltip": "",
+            "defValue": 0,
+            "customDefinition": false,
+            "type": {
+                "id": "number"
+            }
+        },
+        {
+            "name": "horizontal",
+            "label": "Horizontal",
+            "tooltip": "",
+            "defValue": false,
+            "customDefinition": false,
+            "type": {
+                "id": "boolean"
+            }
+        }
+    ]
+}

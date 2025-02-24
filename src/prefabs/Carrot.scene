@@ -1,0 +1,39 @@
+{
+    "id": "60698f43-f8e6-4356-b34c-ef80e6fc4e72",
+    "sceneType": "PREFAB",
+    "settings": {
+        "exportClass": true,
+        "autoImport": true,
+        "importFileExtension": true,
+        "preloadMethodName": "",
+        "preloadPackFiles": [],
+        "createMethodName": "",
+        "borderWidth": 320,
+        "borderHeight": 240
+    },
+    "displayList": [
+        {
+            "type": "Sprite",
+            "id": "11a9c69f-08d7-40be-aaa8-d3884d7f9b07",
+            "label": "carrot",
+            "texture": {
+                "key": "atlas",
+                "frame": "carrot/carrot-1"
+            },
+            "x": 166,
+            "y": 98,
+            "ArcadeComponent.active": true,
+            "body.width": 17,
+            "body.height": 19,
+            "animationPlayMethod": 1,
+            "animationKey": "carrot"
+        }
+    ],
+    "plainObjects": [],
+    "meta": {
+        "app": "Phaser Editor - Scene Editor",
+        "url": "https://phaser.io/editor",
+        "contentType": "phasereditor2d.core.scene.SceneContentType",
+        "version": 5
+    }
+}

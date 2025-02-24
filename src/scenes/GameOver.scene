@@ -1,0 +1,71 @@
+{
+    "id": "ce502088-8c3b-4ca7-91d2-b71de939e04b",
+    "sceneType": "SCENE",
+    "settings": {
+        "exportClass": true,
+        "autoImport": true,
+        "importFileExtension": true,
+        "preloadPackFiles": [],
+        "createMethodName": "editorCreate",
+        "sceneKey": "GameOver",
+        "borderWidth": 320,
+        "borderHeight": 240
+    },
+    "displayList": [
+        {
+            "type": "TileSprite",
+            "id": "60a23d72-174b-467b-aa58-6254661d23c3",
+            "label": "background",
+            "scope": "CLASS",
+            "texture": {
+                "key": "background"
+            },
+            "y": -2,
+            "originX": 0,
+            "originY": 0,
+            "width": 320,
+            "height": 240
+        },
+        {
+            "type": "TileSprite",
+            "id": "fb3ffa4d-38dd-4c65-861a-d68da3edbb69",
+            "label": "middleground",
+            "scope": "CLASS",
+            "texture": {
+                "key": "middleground"
+            },
+            "originX": 0,
+            "originY": 0,
+            "width": 384,
+            "height": 240
+        },
+        {
+            "type": "Image",
+            "id": "0aa4cab7-cf1c-4836-aaf4-5f125b698972",
+            "label": "game_over",
+            "texture": {
+                "key": "game-over"
+            },
+            "x": 160,
+            "y": 120
+        },
+        {
+            "prefabId": "bb52d3a7-d4d3-4ffb-a87c-e50668a41623",
+            "id": "22ed265f-48a3-4e15-af32-570748f8dcfc",
+            "unlock": [
+                "x",
+                "y"
+            ],
+            "label": "press_enter_text",
+            "x": 160,
+            "y": 199
+        }
+    ],
+    "plainObjects": [],
+    "meta": {
+        "app": "Phaser Editor - Scene Editor",
+        "url": "https://phaser.io/editor",
+        "contentType": "phasereditor2d.core.scene.SceneContentType",
+        "version": 5
+    }
+}

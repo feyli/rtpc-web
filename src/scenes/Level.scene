@@ -1,0 +1,1269 @@
+{
+    "id": "01aefa93-6044-4159-8358-7e91310aa05f",
+    "sceneType": "SCENE",
+    "settings": {
+        "exportClass": true,
+        "autoImport": true,
+        "importFileExtension": true,
+        "preloadPackFiles": [],
+        "createMethodName": "editorCreate",
+        "sceneKey": "Level",
+        "borderWidth": 320,
+        "borderHeight": 240
+    },
+    "displayList": [
+        {
+            "type": "TileSprite",
+            "id": "00959771-55fa-414b-99e2-4c4911987d1e",
+            "label": "background",
+            "components": [
+                "FixedToCameraComp",
+                "ParallaxComp"
+            ],
+            "ParallaxComp.factor": 0.2,
+            "texture": {
+                "key": "background"
+            },
+            "y": -2,
+            "originX": 0,
+            "originY": 0,
+            "width": 320,
+            "height": 240
+        },
+        {
+            "type": "TileSprite",
+            "id": "4a9dcde4-e726-4cd7-b712-b907149159e7",
+            "label": "middleground",
+            "components": [
+                "FixedToCameraComp",
+                "ParallaxComp"
+            ],
+            "texture": {
+                "key": "middleground"
+            },
+            "originX": 0,
+            "originY": 0,
+            "width": 384,
+            "height": 240
+        },
+        {
+            "type": "EditableTilemapLayer",
+            "id": "33f86669-2ef0-4d45-b114-2085a44bf5e9",
+            "label": "mainLayer",
+            "scope": "CLASS",
+            "x": 0.5,
+            "y": 0.5,
+            "tilemapId": "adbad958-e0fa-4083-a2bc-454b442abaf7"
+        },
+        {
+            "type": "Layer",
+            "id": "4165df99-d5f0-430e-87ea-d2d3c8bed3ac",
+            "label": "props",
+            "list": [
+                {
+                    "type": "Image",
+                    "id": "ed51c4a4-a30e-40c3-a5ea-ebff6d9e4e92",
+                    "label": "plant_4",
+                    "texture": {
+                        "key": "atlas-props",
+                        "frame": "plant"
+                    },
+                    "x": 32,
+                    "y": 192,
+                    "originX": 0,
+                    "originY": 0
+                },
+                {
+                    "type": "Image",
+                    "id": "f2a3d5e3-1936-4697-a83e-78bb5c0c0453",
+                    "label": "plant_5",
+                    "texture": {
+                        "key": "atlas-props",
+                        "frame": "plant"
+                    },
+                    "x": 368,
+                    "y": 192,
+                    "originX": 0,
+                    "originY": 0
+                },
+                {
+                    "type": "Image",
+                    "id": "f4613638-90c3-48fb-94b0-bcef8ce0375d",
+                    "label": "plant_6",
+                    "texture": {
+                        "key": "atlas-props",
+                        "frame": "plant"
+                    },
+                    "x": 2400,
+                    "y": 192,
+                    "originX": 0,
+                    "originY": 0
+                },
+                {
+                    "type": "Image",
+                    "id": "c9c8eb8e-e51b-4b26-8bc7-da8338c78620",
+                    "label": "plant_7",
+                    "texture": {
+                        "key": "atlas-props",
+                        "frame": "plant"
+                    },
+                    "x": 2432,
+                    "y": 192,
+                    "originX": 0,
+                    "originY": 0
+                },
+                {
+                    "type": "Image",
+                    "id": "6b97764c-015f-4b2d-96b6-8724e7d21019",
+                    "label": "plant_8",
+                    "texture": {
+                        "key": "atlas-props",
+                        "frame": "plant"
+                    },
+                    "x": 2288,
+                    "y": 192,
+                    "originX": 0,
+                    "originY": 0
+                },
+                {
+                    "type": "Image",
+                    "id": "b79b64c3-1dff-41a9-9c30-eb85ccccd1b6",
+                    "label": "plant_9",
+                    "texture": {
+                        "key": "atlas-props",
+                        "frame": "plant"
+                    },
+                    "x": 714,
+                    "y": 192,
+                    "originX": 0,
+                    "originY": 0
+                },
+                {
+                    "type": "Image",
+                    "id": "dda7ee5f-ec13-488c-8530-fc90e9fa0824",
+                    "label": "tree",
+                    "texture": {
+                        "key": "atlas-props",
+                        "frame": "tree"
+                    },
+                    "x": 122.5,
+                    "y": 114.69999694824219
+                },
+                {
+                    "type": "Image",
+                    "id": "f625782f-b33a-4293-88b8-4834c52c3f6d",
+                    "label": "mushroom_red",
+                    "texture": {
+                        "key": "atlas-props",
+                        "frame": "mushroom-red"
+                    },
+                    "x": 187.5,
+                    "y": 178.8000030517578
+                },
+                {
+                    "type": "Image",
+                    "id": "9c1889e6-7cc0-4189-85be-e9e1f82c6cc5",
+                    "label": "vine",
+                    "texture": {
+                        "key": "atlas-props",
+                        "frame": "vine"
+                    },
+                    "x": 68.5,
+                    "y": 26.5
+                },
+                {
+                    "type": "Image",
+                    "id": "434c1661-43b1-4ef7-910b-a9a1f8d2afe8",
+                    "label": "vine_1",
+                    "texture": {
+                        "key": "atlas-props",
+                        "frame": "vine"
+                    },
+                    "x": 420.5,
+                    "y": 26.5
+                },
+                {
+                    "type": "Image",
+                    "id": "6419e52d-c3ca-4308-a398-ecf942ff5485",
+                    "label": "mushroom_brown",
+                    "texture": {
+                        "key": "atlas-props",
+                        "frame": "mushroom-brown"
+                    },
+                    "x": 284.5,
+                    "y": 192.5
+                },
+                {
+                    "type": "Image",
+                    "id": "ed168b56-f552-47ff-b7f6-53ddf1044450",
+                    "label": "tree_1",
+                    "texture": {
+                        "key": "atlas-props",
+                        "frame": "tree"
+                    },
+                    "x": 1920,
+                    "y": 3.2,
+                    "originX": 0,
+                    "originY": 0
+                },
+                {
+                    "type": "Image",
+                    "id": "522bef99-038b-4c35-b437-b66aed30cc27",
+                    "label": "house",
+                    "texture": {
+                        "key": "atlas-props",
+                        "frame": "house"
+                    },
+                    "x": 2432.5,
+                    "y": 125.70000076293945
+                },
+                {
+                    "type": "Image",
+                    "id": "37a5b3f1-6d98-4f5e-bf41-a822109226a1",
+                    "label": "vine_2",
+                    "texture": {
+                        "key": "atlas-props",
+                        "frame": "vine"
+                    },
+                    "x": 800.5,
+                    "y": 26.5
+                },
+                {
+                    "type": "Image",
+                    "id": "449cd51e-8d79-4758-957f-e9d749e7698d",
+                    "label": "vine_3",
+                    "texture": {
+                        "key": "atlas-props",
+                        "frame": "vine"
+                    },
+                    "x": 2196.5,
+                    "y": 26.5
+                },
+                {
+                    "type": "Image",
+                    "id": "b80113a1-5bdc-41d1-86f1-4330e1c154b1",
+                    "label": "mushroom_red_1",
+                    "texture": {
+                        "key": "atlas-props",
+                        "frame": "mushroom-red"
+                    },
+                    "x": 2315.5,
+                    "y": 194.8000030517578
+                },
+                {
+                    "type": "Image",
+                    "id": "c5ce66c0-4a05-4b44-b079-94657c95a697",
+                    "label": "mushroom_red_2",
+                    "texture": {
+                        "key": "atlas-props",
+                        "frame": "mushroom-red"
+                    },
+                    "x": 2254,
+                    "y": 196,
+                    "flipX": true
+                }
+            ]
+        },
+        {
+            "type": "Layer",
+            "id": "2d1d1905-e0b3-42ba-a943-a93c140c8d29",
+            "label": "enemiesLayer",
+            "list": [
+                {
+                    "prefabId": "d154bf6f-b260-4a2b-8bf8-c0763c997672",
+                    "id": "bf141ca9-84ca-4f93-a518-e4132a8c785d",
+                    "unlock": [
+                        "x",
+                        "y",
+                        "distance"
+                    ],
+                    "label": "bee",
+                    "distance": 20,
+                    "x": 528,
+                    "y": 160
+                },
+                {
+                    "prefabId": "d154bf6f-b260-4a2b-8bf8-c0763c997672",
+                    "id": "06e42895-1391-42b6-8055-31add99e9ad7",
+                    "unlock": [
+                        "x",
+                        "y",
+                        "distance",
+                        "horizontal"
+                    ],
+                    "label": "bee_1",
+                    "distance": 30,
+                    "horizontal": true,
+                    "x": 768,
+                    "y": 159
+                },
+                {
+                    "prefabId": "d154bf6f-b260-4a2b-8bf8-c0763c997672",
+                    "id": "8a1728dc-dc7a-4340-96ea-2720829d15ed",
+                    "unlock": [
+                        "x",
+                        "y",
+                        "distance"
+                    ],
+                    "label": "bee_2",
+                    "distance": 30,
+                    "x": 960,
+                    "y": 160
+                },
+                {
+                    "prefabId": "d154bf6f-b260-4a2b-8bf8-c0763c997672",
+                    "id": "8910e239-1e07-4ace-b935-9d325959036c",
+                    "unlock": [
+                        "x",
+                        "y",
+                        "horizontal",
+                        "distance"
+                    ],
+                    "label": "bee_3",
+                    "distance": 30,
+                    "horizontal": true,
+                    "x": 1776,
+                    "y": 144
+                },
+                {
+                    "prefabId": "d154bf6f-b260-4a2b-8bf8-c0763c997672",
+                    "id": "799a8c6a-4bb2-4092-80d9-250a3111f280",
+                    "unlock": [
+                        "x",
+                        "y",
+                        "distance"
+                    ],
+                    "label": "bee_4",
+                    "distance": 30,
+                    "x": 2272,
+                    "y": 144
+                },
+                {
+                    "prefabId": "3d1a44de-031d-4659-8aea-bca62d81360b",
+                    "id": "f1edc5cf-28eb-453c-af3b-25575a348a3c",
+                    "unlock": [
+                        "x",
+                        "y"
+                    ],
+                    "label": "plant",
+                    "x": 672,
+                    "y": 166
+                },
+                {
+                    "prefabId": "3d1a44de-031d-4659-8aea-bca62d81360b",
+                    "id": "312c8814-4c8c-4421-8e89-7d2d803b2a23",
+                    "unlock": [
+                        "x",
+                        "y"
+                    ],
+                    "label": "plant_1",
+                    "x": 1024,
+                    "y": 89
+                },
+                {
+                    "prefabId": "3d1a44de-031d-4659-8aea-bca62d81360b",
+                    "id": "b8267924-e2cd-4e7a-8da3-a50927e632b6",
+                    "unlock": [
+                        "x",
+                        "y"
+                    ],
+                    "label": "plant_2",
+                    "x": 1616,
+                    "y": 344
+                },
+                {
+                    "prefabId": "3d1a44de-031d-4659-8aea-bca62d81360b",
+                    "id": "4b2a1241-deaa-4d97-9cde-4c9d698d5cde",
+                    "unlock": [
+                        "x",
+                        "y",
+                        "flipX",
+                        "flipY"
+                    ],
+                    "label": "plant_3",
+                    "x": 1600,
+                    "y": 122,
+                    "flipX": true,
+                    "flipY": false
+                },
+                {
+                    "prefabId": "6959e499-9b3d-446f-b708-26b73d0546ca",
+                    "id": "7d6f033f-c200-4e4a-80b6-03d8a476cfef",
+                    "unlock": [
+                        "x",
+                        "y"
+                    ],
+                    "label": "slug",
+                    "x": 192,
+                    "y": 192
+                },
+                {
+                    "prefabId": "6959e499-9b3d-446f-b708-26b73d0546ca",
+                    "id": "a918c286-6bdc-4c98-a0e0-cc8d774a00c9",
+                    "unlock": [
+                        "x",
+                        "y"
+                    ],
+                    "label": "slug_1",
+                    "x": 288,
+                    "y": 208
+                },
+                {
+                    "prefabId": "6959e499-9b3d-446f-b708-26b73d0546ca",
+                    "id": "42949d4e-864d-4616-a8ea-01e845b1110c",
+                    "unlock": [
+                        "x",
+                        "y"
+                    ],
+                    "label": "slug_4",
+                    "x": 1168,
+                    "y": 368
+                },
+                {
+                    "prefabId": "6959e499-9b3d-446f-b708-26b73d0546ca",
+                    "id": "195362a5-daa1-43d9-b608-facf9fe0badb",
+                    "unlock": [
+                        "x",
+                        "y"
+                    ],
+                    "label": "slug_9",
+                    "x": 496,
+                    "y": 32
+                },
+                {
+                    "prefabId": "6959e499-9b3d-446f-b708-26b73d0546ca",
+                    "id": "4625add2-e1fe-44d1-a649-26a537b01c47",
+                    "unlock": [
+                        "x",
+                        "y"
+                    ],
+                    "label": "slug_10",
+                    "x": 1488,
+                    "y": 368
+                },
+                {
+                    "prefabId": "6959e499-9b3d-446f-b708-26b73d0546ca",
+                    "id": "b339d642-9703-45bf-927c-f9ae4c43d1dc",
+                    "unlock": [
+                        "x",
+                        "y"
+                    ],
+                    "label": "slug_12",
+                    "x": 1328,
+                    "y": 369
+                },
+                {
+                    "prefabId": "6959e499-9b3d-446f-b708-26b73d0546ca",
+                    "id": "b6fd7efe-a6be-4730-af86-d61d4cf9c57a",
+                    "unlock": [
+                        "x",
+                        "y"
+                    ],
+                    "label": "slug_13",
+                    "x": 2064,
+                    "y": 192
+                },
+                {
+                    "prefabId": "6959e499-9b3d-446f-b708-26b73d0546ca",
+                    "id": "2754d5d1-6bfd-456f-b2b8-104e32a5a52f",
+                    "unlock": [
+                        "x",
+                        "y"
+                    ],
+                    "label": "slug_14",
+                    "x": 2112,
+                    "y": 192
+                }
+            ]
+        },
+        {
+            "type": "Layer",
+            "id": "717910f8-e488-45e7-b648-e5ef7d9c8215",
+            "label": "chestLayer",
+            "list": [
+                {
+                    "prefabId": "3aff3233-9f2e-4d02-b14d-332c837dee17",
+                    "id": "5b961069-8f0c-4911-a315-d2d0ccdcadf4",
+                    "unlock": [
+                        "x",
+                        "y"
+                    ],
+                    "label": "chest",
+                    "x": 1136,
+                    "y": 192
+                },
+                {
+                    "prefabId": "3aff3233-9f2e-4d02-b14d-332c837dee17",
+                    "id": "cf7e8c86-40da-4193-a973-d06c872d3409",
+                    "unlock": [
+                        "x",
+                        "y"
+                    ],
+                    "label": "chest_1",
+                    "x": 512,
+                    "y": 384
+                }
+            ]
+        },
+        {
+            "type": "Layer",
+            "id": "637a5da4-8aec-445c-b95e-2db46bd6ffce",
+            "label": "lootLayer",
+            "scope": "CLASS"
+        },
+        {
+            "type": "Layer",
+            "id": "8221c630-149c-4950-a26b-cfc8520954f9",
+            "label": "starsLayer",
+            "list": [
+                {
+                    "prefabId": "19602c98-5d7d-4665-a840-58f97483d047",
+                    "id": "df80877c-6a67-429f-b691-c40b3bcb24a6",
+                    "unlock": [
+                        "x",
+                        "y"
+                    ],
+                    "label": "star",
+                    "x": 160.5,
+                    "y": 142.8333282470703
+                },
+                {
+                    "prefabId": "19602c98-5d7d-4665-a840-58f97483d047",
+                    "id": "1e72048c-9a08-4de2-b6ba-c7b13755177a",
+                    "unlock": [
+                        "x",
+                        "y"
+                    ],
+                    "label": "star_1",
+                    "x": 302.6666564941406,
+                    "y": 63
+                },
+                {
+                    "prefabId": "19602c98-5d7d-4665-a840-58f97483d047",
+                    "id": "9e9795fe-5042-4a2a-b761-1b25983975d0",
+                    "unlock": [
+                        "x",
+                        "y"
+                    ],
+                    "label": "star_2",
+                    "x": 272.6666564941406,
+                    "y": 63
+                },
+                {
+                    "prefabId": "19602c98-5d7d-4665-a840-58f97483d047",
+                    "id": "9f234332-febb-4bff-ab74-d87f434c8782",
+                    "unlock": [
+                        "x",
+                        "y"
+                    ],
+                    "label": "star_3",
+                    "x": 208,
+                    "y": 143.1666717529297
+                },
+                {
+                    "prefabId": "19602c98-5d7d-4665-a840-58f97483d047",
+                    "id": "7e2e1895-6e0d-4679-ad49-488c32df4c73",
+                    "unlock": [
+                        "x",
+                        "y"
+                    ],
+                    "label": "star_5",
+                    "x": 242.6666717529297,
+                    "y": 63.16666793823242
+                },
+                {
+                    "prefabId": "19602c98-5d7d-4665-a840-58f97483d047",
+                    "id": "d1638a3f-6d84-4090-a3b3-2e7caf0ddb3c",
+                    "unlock": [
+                        "x",
+                        "y"
+                    ],
+                    "label": "star_6",
+                    "x": 399.3333435058594,
+                    "y": 144.5
+                },
+                {
+                    "prefabId": "19602c98-5d7d-4665-a840-58f97483d047",
+                    "id": "add0fd0a-baaa-4e9a-9ac6-4f7ac9da9454",
+                    "unlock": [
+                        "x",
+                        "y"
+                    ],
+                    "label": "star_7",
+                    "x": 428.6666564941406,
+                    "y": 143.8333282470703
+                },
+                {
+                    "prefabId": "19602c98-5d7d-4665-a840-58f97483d047",
+                    "id": "f5185cbd-ee99-4e8b-8f7d-9e29e2fc12a7",
+                    "unlock": [
+                        "x",
+                        "y"
+                    ],
+                    "label": "star_8",
+                    "x": 653.3333129882812,
+                    "y": 79.83333587646484
+                },
+                {
+                    "prefabId": "19602c98-5d7d-4665-a840-58f97483d047",
+                    "id": "e31197d8-22ad-4cc5-8127-1c50ba5981cd",
+                    "unlock": [
+                        "x",
+                        "y"
+                    ],
+                    "label": "star_9",
+                    "x": 655.3333129882812,
+                    "y": 112.5
+                },
+                {
+                    "prefabId": "19602c98-5d7d-4665-a840-58f97483d047",
+                    "id": "1b856783-0287-4ae7-8ea9-1343f847bbb9",
+                    "unlock": [
+                        "x",
+                        "y"
+                    ],
+                    "label": "star_10",
+                    "x": 1456,
+                    "y": 257.8333435058594
+                },
+                {
+                    "prefabId": "19602c98-5d7d-4665-a840-58f97483d047",
+                    "id": "1b2000f7-7c87-4c3f-95ad-2ae2f5f6affd",
+                    "unlock": [
+                        "x",
+                        "y"
+                    ],
+                    "label": "star_11",
+                    "x": 1486,
+                    "y": 257.1666564941406
+                },
+                {
+                    "prefabId": "19602c98-5d7d-4665-a840-58f97483d047",
+                    "id": "024c5d34-5a47-4163-a81f-6f95313dd529",
+                    "unlock": [
+                        "x",
+                        "y"
+                    ],
+                    "label": "star_12",
+                    "x": 1516.6666259765625,
+                    "y": 256.5
+                },
+                {
+                    "prefabId": "19602c98-5d7d-4665-a840-58f97483d047",
+                    "id": "a5c080e4-19c6-4746-90ae-44d6da663473",
+                    "unlock": [
+                        "x",
+                        "y"
+                    ],
+                    "label": "star_13",
+                    "x": 1664.6666259765625,
+                    "y": 285.8333435058594
+                },
+                {
+                    "prefabId": "19602c98-5d7d-4665-a840-58f97483d047",
+                    "id": "78520ae3-2c5c-47a1-9ae3-c7ce41c8b38b",
+                    "unlock": [
+                        "x",
+                        "y"
+                    ],
+                    "label": "star_14",
+                    "x": 1183.3333740234375,
+                    "y": 309.1666564941406
+                },
+                {
+                    "prefabId": "19602c98-5d7d-4665-a840-58f97483d047",
+                    "id": "c4bda961-4d5a-438e-ac33-d32368ac40c8",
+                    "unlock": [
+                        "x",
+                        "y"
+                    ],
+                    "label": "star_15",
+                    "x": 1272.6666259765625,
+                    "y": 311.1666564941406
+                },
+                {
+                    "prefabId": "19602c98-5d7d-4665-a840-58f97483d047",
+                    "id": "f2ec4233-95ae-4293-a069-447a5ec87d24",
+                    "unlock": [
+                        "x",
+                        "y"
+                    ],
+                    "label": "star_16",
+                    "x": 1367.3333740234375,
+                    "y": 309.8333435058594
+                },
+                {
+                    "prefabId": "19602c98-5d7d-4665-a840-58f97483d047",
+                    "id": "4289f1f1-6b4e-4bbd-9211-0bc40dc87aa0",
+                    "unlock": [
+                        "x",
+                        "y"
+                    ],
+                    "label": "star_17",
+                    "x": 1632,
+                    "y": 79.16666412353516
+                },
+                {
+                    "prefabId": "19602c98-5d7d-4665-a840-58f97483d047",
+                    "id": "e327b219-8c6a-4f17-8955-4275365f68d8",
+                    "unlock": [
+                        "x",
+                        "y"
+                    ],
+                    "label": "star_18",
+                    "x": 1664.6666259765625,
+                    "y": 79.16666412353516
+                },
+                {
+                    "prefabId": "19602c98-5d7d-4665-a840-58f97483d047",
+                    "id": "62384a47-b9c5-4029-91d9-cb8a7dffd718",
+                    "unlock": [
+                        "x",
+                        "y"
+                    ],
+                    "label": "star_19",
+                    "x": 1697.3333740234375,
+                    "y": 79.83333587646484
+                },
+                {
+                    "prefabId": "19602c98-5d7d-4665-a840-58f97483d047",
+                    "id": "daa5c33e-d92f-4b5d-9c40-3b7783bd2cf2",
+                    "unlock": [
+                        "x",
+                        "y"
+                    ],
+                    "label": "star_20",
+                    "x": 2082,
+                    "y": 79.83333587646484
+                },
+                {
+                    "prefabId": "19602c98-5d7d-4665-a840-58f97483d047",
+                    "id": "1a91d789-7d98-441e-a29b-b6235f97f255",
+                    "unlock": [
+                        "x",
+                        "y"
+                    ],
+                    "label": "star_21",
+                    "x": 2145.333251953125,
+                    "y": 79.83333587646484
+                },
+                {
+                    "prefabId": "19602c98-5d7d-4665-a840-58f97483d047",
+                    "id": "2e62b285-3452-47a6-b8de-ae4db77719ce",
+                    "unlock": [
+                        "x",
+                        "y"
+                    ],
+                    "label": "star_22",
+                    "x": 2210,
+                    "y": 79.83333587646484
+                },
+                {
+                    "prefabId": "19602c98-5d7d-4665-a840-58f97483d047",
+                    "id": "67e4bdf2-0c5c-4967-88d5-2909626c4aae",
+                    "unlock": [
+                        "x",
+                        "y"
+                    ],
+                    "label": "star_23",
+                    "x": 2322.666748046875,
+                    "y": 191.8333282470703
+                },
+                {
+                    "prefabId": "19602c98-5d7d-4665-a840-58f97483d047",
+                    "id": "84c3da6e-12d5-45d4-a89b-4da433eaa305",
+                    "unlock": [
+                        "x",
+                        "y"
+                    ],
+                    "label": "star_24",
+                    "x": 2286.666748046875,
+                    "y": 192.5
+                },
+                {
+                    "prefabId": "19602c98-5d7d-4665-a840-58f97483d047",
+                    "id": "b1c38582-7176-4be0-ac19-5149dbf3fc39",
+                    "unlock": [
+                        "x",
+                        "y"
+                    ],
+                    "label": "star_25",
+                    "x": 2351.333251953125,
+                    "y": 191.8333282470703
+                }
+            ]
+        },
+        {
+            "type": "Layer",
+            "id": "3b6afccf-adc3-4ed7-8e17-589ee127d56e",
+            "label": "carrotsLayer",
+            "list": [
+                {
+                    "prefabId": "60698f43-f8e6-4356-b34c-ef80e6fc4e72",
+                    "id": "97a669d0-b733-4015-8cb8-79a49b2fe17b",
+                    "unlock": [
+                        "x",
+                        "y"
+                    ],
+                    "label": "carrot",
+                    "x": 936,
+                    "y": 311
+                },
+                {
+                    "prefabId": "60698f43-f8e6-4356-b34c-ef80e6fc4e72",
+                    "id": "66fdff11-b6dd-4991-8f6e-7bf6d6e3c9c3",
+                    "unlock": [
+                        "x",
+                        "y"
+                    ],
+                    "label": "carrot_1",
+                    "x": 766.8333129882812,
+                    "y": 81.5
+                },
+                {
+                    "prefabId": "60698f43-f8e6-4356-b34c-ef80e6fc4e72",
+                    "id": "4898e682-9ecb-4249-a2bf-c0b24bc1dce0",
+                    "unlock": [
+                        "x",
+                        "y"
+                    ],
+                    "label": "carrot_2",
+                    "x": 404.5,
+                    "y": 67
+                },
+                {
+                    "prefabId": "60698f43-f8e6-4356-b34c-ef80e6fc4e72",
+                    "id": "38a2615e-a464-41c3-a789-f208e1f2251b",
+                    "unlock": [
+                        "x",
+                        "y"
+                    ],
+                    "label": "carrot_5",
+                    "x": 1985.8333740234375,
+                    "y": 48.16666793823242
+                },
+                {
+                    "prefabId": "60698f43-f8e6-4356-b34c-ef80e6fc4e72",
+                    "id": "d7d112c4-1635-49f1-8012-698ab459bb28",
+                    "unlock": [
+                        "x",
+                        "y"
+                    ],
+                    "label": "carrot_3",
+                    "x": 1484.6666259765625,
+                    "y": 45.5
+                }
+            ]
+        },
+        {
+            "prefabId": "cc79cc73-e8ed-40e6-8632-173da9499410",
+            "id": "1ad317ac-6aa4-4f3f-b604-b4d309127832",
+            "unlock": [
+                "x",
+                "y"
+            ],
+            "label": "player",
+            "scope": "CLASS",
+            "x": 64,
+            "y": 160
+        },
+        {
+            "type": "Layer",
+            "id": "92843b29-c600-4cfb-a0fe-473d39d5ceab",
+            "label": "rocks",
+            "list": [
+                {
+                    "type": "Image",
+                    "id": "54aefe43-0919-409d-8e7c-868c163331d0",
+                    "label": "rock",
+                    "texture": {
+                        "key": "atlas-props",
+                        "frame": "rock"
+                    },
+                    "x": 256,
+                    "y": 203.1999969482422,
+                    "originX": 0,
+                    "originY": 0
+                },
+                {
+                    "type": "Image",
+                    "id": "a445ad4c-d7e3-46b1-890e-e0cedc9df242",
+                    "label": "rock_1",
+                    "texture": {
+                        "key": "atlas-props",
+                        "frame": "rock"
+                    },
+                    "x": 848,
+                    "y": 187.1999969482422,
+                    "originX": 0,
+                    "originY": 0
+                },
+                {
+                    "type": "Image",
+                    "id": "c272b042-3f54-4fbd-b642-7d98fb442e77",
+                    "label": "rock_2",
+                    "texture": {
+                        "key": "atlas-props",
+                        "frame": "rock"
+                    },
+                    "x": 1497,
+                    "y": 72,
+                    "originX": 0,
+                    "originY": 0
+                }
+            ]
+        },
+        {
+            "type": "EditableTilemapLayer",
+            "id": "acb0f7e7-fdac-4ac2-82e8-81ef4fd5899d",
+            "label": "collisionsLayer",
+            "scope": "CLASS",
+            "x": 0.5,
+            "y": 0.5,
+            "visible": false,
+            "tilemapId": "adbad958-e0fa-4083-a2bc-454b442abaf7"
+        },
+        {
+            "type": "Layer",
+            "id": "f776962c-1d4d-4274-a52e-51c8730694a8",
+            "label": "slugZoneLayer",
+            "visible": false,
+            "list": [
+                {
+                    "prefabId": "75019b3e-a10b-4161-96b4-663a447e579e",
+                    "id": "07cbb4b6-120d-4abd-b5a7-47165a946f9a",
+                    "unlock": [
+                        "x",
+                        "y"
+                    ],
+                    "label": "collisions2",
+                    "x": 144,
+                    "y": 176
+                },
+                {
+                    "prefabId": "75019b3e-a10b-4161-96b4-663a447e579e",
+                    "id": "b6206b98-16b8-4eb5-b2a7-9bdd0dbc5fed",
+                    "unlock": [
+                        "x",
+                        "y"
+                    ],
+                    "label": "collisions",
+                    "x": 240,
+                    "y": 176
+                },
+                {
+                    "prefabId": "75019b3e-a10b-4161-96b4-663a447e579e",
+                    "id": "3dc34c3f-f08a-41b7-b99d-d813cd9fa678",
+                    "unlock": [
+                        "x",
+                        "y"
+                    ],
+                    "label": "collisions_1",
+                    "x": 448,
+                    "y": 16
+                },
+                {
+                    "prefabId": "75019b3e-a10b-4161-96b4-663a447e579e",
+                    "id": "1403551e-6a36-42ed-b592-7ee3bf3a13ac",
+                    "unlock": [
+                        "x",
+                        "y"
+                    ],
+                    "label": "collisions_2",
+                    "x": 560,
+                    "y": 16
+                },
+                {
+                    "prefabId": "75019b3e-a10b-4161-96b4-663a447e579e",
+                    "id": "88776792-3fa4-478c-9f80-e48d42b0dd9f",
+                    "unlock": [
+                        "x",
+                        "y"
+                    ],
+                    "label": "collisions_3",
+                    "x": 1104,
+                    "y": 352
+                },
+                {
+                    "prefabId": "75019b3e-a10b-4161-96b4-663a447e579e",
+                    "id": "67524887-8554-49ff-ba74-8c166e2468a7",
+                    "unlock": [
+                        "x",
+                        "y"
+                    ],
+                    "label": "collisions_4",
+                    "x": 1232,
+                    "y": 352
+                },
+                {
+                    "prefabId": "75019b3e-a10b-4161-96b4-663a447e579e",
+                    "id": "c024c49d-f34f-4472-9a5f-aea1d90737ba",
+                    "unlock": [
+                        "x",
+                        "y"
+                    ],
+                    "label": "collisions_5",
+                    "x": 1248,
+                    "y": 352
+                },
+                {
+                    "prefabId": "75019b3e-a10b-4161-96b4-663a447e579e",
+                    "id": "a6da73d8-ebba-4ada-92a6-567222767e9a",
+                    "unlock": [
+                        "x",
+                        "y"
+                    ],
+                    "label": "collisions_6",
+                    "x": 2032,
+                    "y": 176
+                },
+                {
+                    "prefabId": "75019b3e-a10b-4161-96b4-663a447e579e",
+                    "id": "cf2099fa-d676-4601-885e-cde8d8c192d8",
+                    "unlock": [
+                        "x",
+                        "y"
+                    ],
+                    "label": "collisions_7",
+                    "x": 2208,
+                    "y": 176
+                }
+            ]
+        },
+        {
+            "type": "Container",
+            "id": "587a0ed6-c29d-4c48-81c1-1735f751834b",
+            "label": "hudLayer",
+            "components": [
+                "FixedToCameraComp"
+            ],
+            "list": [
+                {
+                    "type": "Image",
+                    "id": "0ae26adc-6b68-48a2-8e70-e51f96b059d4",
+                    "label": "hud",
+                    "scope": "CLASS",
+                    "texture": {
+                        "key": "atlas",
+                        "frame": "hud/hud-4"
+                    },
+                    "x": 10,
+                    "y": 11,
+                    "originX": 0,
+                    "originY": 0
+                },
+                {
+                    "type": "Text",
+                    "id": "e56ae4af-cc30-4f92-b0ff-e27909ea2959",
+                    "label": "scoreLabel",
+                    "scope": "CLASS",
+                    "x": 57,
+                    "y": 12,
+                    "text": "0",
+                    "align": "center",
+                    "fontFamily": "VT323",
+                    "fontSize": "8px"
+                }
+            ]
+        }
+    ],
+    "plainObjects": [
+        {
+            "id": "adbad958-e0fa-4083-a2bc-454b442abaf7",
+            "type": "EditableTilemap",
+            "label": "levelMap",
+            "width": 24,
+            "height": 15,
+            "tileWidth": 16,
+            "tileHeight": 16,
+            "tilesets": [
+                {
+                    "name": "collisions",
+                    "imageKey": "collisions",
+                    "tileWidth": 16,
+                    "tileHeight": 16,
+                    "tileMargin": 0,
+                    "tileSpacing": 0
+                },
+                {
+                    "name": "tileset",
+                    "imageKey": "tileset",
+                    "tileWidth": 16,
+                    "tileHeight": 16,
+                    "tileMargin": 0,
+                    "tileSpacing": 0
+                }
+            ],
+            "paintLayerId": "33f86669-2ef0-4d45-b114-2085a44bf5e9",
+            "paintTileset": "collisions",
+            "layers": [
+                {
+                    "name": "mainLayer",
+                    "data": "[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,236,237,217,217,167,167,217,217,217,217,217,217,217,217,217,217,218,218,218,218,219,0,0,0,0,0,0,157,157,157,157,217,217,167,217,217,217,217,217,167,212,213,117,117,117,117,117,117,117,117,117,139,217,237,217,217,217,219,0,0,0,0,0,0,0,0,0,0,212,213,212,213,212,213,209,210,212,213,212,213,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,58,0,58,0,0,0,0,0,0,236,237,217,187,187,217,217,217,217,217,217,217,217,217,167,218,218,218,218,219,0,0,0,0,0,0,209,210,157,157,217,237,187,217,217,217,217,167,187,232,233,117,117,117,117,117,117,117,117,117,139,217,237,217,217,217,219,0,0,0,0,0,0,0,0,0,0,232,233,232,233,232,233,229,230,232,233,232,233,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,212,213,209,210,212,213,0,0,0,0,0,216,217,167,217,217,237,217,217,217,237,217,217,167,187,218,218,218,237,239,0,0,0,0,0,0,229,230,157,157,217,217,237,217,217,217,217,187,237,212,213,117,117,117,117,117,117,117,117,117,139,217,217,217,217,237,217,199,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,32,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,232,233,229,230,232,233,0,0,0,0,0,216,217,187,217,217,217,217,217,217,217,217,217,187,217,217,218,237,239,0,0,0,0,0,0,0,157,157,157,209,210,217,217,217,188,217,217,237,167,232,233,117,117,117,117,117,117,117,117,117,139,157,217,217,217,217,217,237,199,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,32,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,2684354794,2684354774,2684354794,2684354774,2684354794,2684354774,0,0,0,0,58,0,0,0,212,213,212,213,0,0,0,0,0,0,0,0,216,197,217,217,217,217,167,217,217,217,217,217,217,217,167,217,237,239,0,0,0,0,0,0,0,0,157,157,157,229,230,217,217,217,217,217,217,217,187,212,213,117,117,117,117,117,117,117,117,117,117,212,213,212,213,212,213,212,213,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,32,0,0,58,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,12,13,14,13,14,15,232,233,232,233,0,0,0,0,0,0,0,196,197,217,217,217,217,167,187,167,217,217,217,217,217,217,187,217,239,0,0,0,0,0,0,0,0,0,209,210,157,157,157,157,157,212,213,167,217,217,217,232,233,117,117,117,117,117,117,117,117,117,117,232,233,232,233,232,233,232,233,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,32,21,76,78,78,79,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,32,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,196,217,217,217,217,217,217,187,167,187,217,217,217,217,217,217,217,219,0,0,0,0,0,0,0,0,0,196,229,230,157,212,213,212,213,232,233,187,217,217,217,212,213,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,139,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,32,0,136,137,137,139,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,32,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,216,217,217,217,217,237,217,217,187,217,217,237,217,217,217,217,217,237,199,0,0,0,0,0,0,76,77,78,157,157,157,232,233,232,233,167,217,217,237,217,217,232,233,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,99,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,136,137,137,139,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,216,237,217,167,217,217,217,217,217,217,217,217,217,167,217,217,217,217,219,0,0,0,0,0,95,96,97,98,157,212,213,157,217,217,217,187,217,167,217,209,210,212,213,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,139,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,136,137,137,139,199,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,216,217,167,187,217,167,217,217,217,217,217,217,217,187,237,217,217,237,239,0,0,0,0,0,115,116,117,118,157,232,233,157,217,217,217,217,217,187,217,229,230,232,233,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,77,78,78,99,17,19,12,19,0,0,0,0,0,0,0,0,0,136,137,137,139,217,199,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,57,58,0,0,0,0,0,0,0,0,0,196,197,217,187,167,217,187,217,217,217,217,217,217,217,237,237,217,217,237,199,0,0,0,0,0,0,136,117,209,210,157,209,210,217,217,217,217,217,212,213,212,213,212,213,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,97,98,98,119,120,0,32,0,0,0,0,0,0,0,0,0,0,136,137,137,139,217,217,199,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,57,57,0,0,0,0,0,0,0,0,0,0,76,78,77,157,79,0,0,0,0,0,75,76,77,78,77,157,187,217,217,217,217,217,217,217,167,217,166,217,217,217,217,198,199,0,0,0,0,0,136,117,229,230,157,229,230,217,217,217,217,217,232,233,232,233,232,233,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,157,117,117,99,100,0,32,0,0,0,0,0,0,0,0,0,0,136,137,137,139,217,217,219,0,0,0,0,0,0,57,57,57,58,57,57,58,57,58,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,57,58,0,57,0,0,58,0,76,78,77,78,79,0,0,0,57,58,0,57,57,57,136,98,97,157,139,0,0,0,0,0,95,96,97,98,97,98,77,78,157,157,77,157,217,217,187,217,217,157,78,78,78,78,78,77,79,0,0,0,136,117,117,157,157,157,212,213,212,213,212,213,212,213,212,213,212,213,117,117,117,117,117,117,117,117,117,117,147,147,147,147,147,147,147,117,117,117,117,119,120,0,32,0,0,10,10,10,10,10,10,10,10,136,137,137,139,217,217,219,0,0,57,57,58,0,70,77,77,78,77,78,77,77,78,72,0,0,57,57,57,58,0,57,57,57,58,0,0,0,0,0,0,0,57,58,0,0,77,78,77,78,77,157,157,78,77,78,157,98,97,98,117,78,77,78,78,77,157,77,78,77,98,98,98,98,139,0,0,0,0,0,115,116,117,117,117,117,97,98,157,98,97,139,167,217,166,217,167,136,98,98,98,98,98,97,139,0,0,115,116,117,117,209,210,157,232,233,232,233,232,233,232,233,232,233,232,233,117,117,117,117,117,117,117,117,117,139,61,63,63,61,63,63,61,136,117,117,117,99,100,0,32,0,0,76,78,77,78,77,78,77,77,137,137,137,137,77,78,77,78,77,78,77,78,77,90,117,97,98,97,98,97,97,98,92,77,78,77,78,77,77,78,77,78,77,78,77,77,77,78,77,78,77,78,78,77,78,97,98,97,98,97,98,157,98,97,98,98,117,117,117,117,98,97,98,98,97,98,97,98,97,98,98,98,98,139,10,10,10,10,10,10,136,117,117,117,117,117,117,117,117,117,139,187,217,217,166,187,136,117,117,138,117,117,117,139,10,10,10,136,117,117,229,230,157,212,213,212,213,212,213,212,213,212,213,212,213,117,117,117,117,157,117,117,117,117,139,81,83,83,81,83,83,81,136,117,117,157,119,146,146,146,146,146,157,98,97,98,97,98,97,97,137,137,137,137,97,98,97,98,97,98,97,98,97,98,117,117,117,117,117,117,117,117,117,97,98,97,98,97,97,98,97,98,97,98,97,97,97,98,97,98,97,98,98,97,98,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,157,78,78,78,78,78,78,157,117,117,117,117,117,117,117,117,117,139,186,186,186,186,166,136,117,117,138,117,157,157,117,157,157,157,117,117,157,157,157,157,232,233,232,233,232,233,232,233,232,233,232,233,147,147,147,147,157,157,147,147,157,147,101,166,166,101,166,166,101,147,147,147,147,157,166,167,166,166,166,136,157,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,139,186,167,186,186,186,147,147,147,148,147,157,157,147,157,147,147,157,147,147,212,213,212,213,63,63,63,61,63,63,61,63,63,61,63,63,61,63,63,61,63,63,61,63,63,101,166,166,101,166,166,101,63,63,65,166,167,186,187,166,167,166,136,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,138,117,117,117,117,117,117,138,117,117,117,117,117,117,117,139,186,187,186,166,186,63,63,63,63,63,63,63,63,63,63,63,63,63,63,232,233,232,233,186,186,186,81,83,83,81,83,83,81,83,83,81,83,83,81,83,83,81,83,83,101,166,166,101,166,166,101,83,83,85,186,187,166,166,166,187,166,136,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,157,147,147,148,147,147,147,147,147,147,148,157,117,117,117,117,117,117,139,186,186,186,186,167,186,186,186,186,186,167,186,186,186,186,186,186,186,186,141,142,143,144,166,166,166,101,166,166,101,166,166,101,166,166,101,166,166,101,166,166,101,166,166,101,166,166,101,166,166,101,166,167,105,166,186,166,166,186,186,186,136,157,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,139,166,166,166,167,166,141,142,143,144,166,136,117,117,117,117,117,117,139,186,186,166,186,187,186,186,166,186,186,187,186,166,186,186,186,186,166,186,161,162,163,164,186,166,186,105,186,186,105,186,186,105,186,186,105,186,186,105,186,186,105,186,186,105,186,186,105,186,186,105,186,187,105,167,166,166,186,186,166,212,213,157,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,139,186,166,167,187,186,161,162,163,164,186,136,117,117,117,117,117,117,139,186,186,188,166,186,186,186,188,166,186,186,186,188,166,186,186,186,188,166,181,182,183,184,166,166,166,101,188,186,101,188,186,101,188,186,101,188,186,101,188,186,101,188,186,101,188,186,101,188,186,101,188,186,105,187,166,167,166,186,186,232,233,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,139,186,186,187,166,167,181,182,183,184,166,136,117,117,117,117,117,117,139,186,166,166,166,166,167,166,166,166,166,186,166,166,166,166,186,166,166,166,201,202,203,204,166,166,166,101,166,166,101,166,166,101,166,166,101,166,166,101,212,213,101,166,166,101,166,166,101,166,166,101,166,166,105,166,166,187,166,212,213,136,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,139,186,167,166,166,187,201,202,203,204,186,136,117,117,117,117,117,117,139,186,186,186,186,186,187,186,186,186,186,186,186,186,186,186,186,186,186,186,221,222,223,224,186,186,186,101,186,186,101,186,186,101,186,186,101,186,186,101,232,233,101,186,212,213,186,186,101,186,186,101,212,213,105,186,186,186,186,232,233,136,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,139,186,187,186,186,186,221,222,223,224,186,136,117,117,117,117,117,117,139,212,213,206,207,206,206,206,207,206,207,157,157,157,157,206,207,206,207,206,157,157,207,206,207,206,157,157,207,206,207,206,207,157,157,207,206,207,206,206,207,206,212,213,232,233,206,207,207,206,207,207,232,233,207,206,207,212,213,157,157,157,117,157,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,157,206,207,207,207,207,207,207,207,206,207,157,117,117,117,117,117,117,139,232,233,117,117,117,117,117,117,117,117,117,157,157,117,117,117,117,117,117,117,117,117,117,117,117,117,157,117,117,117,117,117,117,117,117,117,117,117,117,117,117,232,233,117,117,117,117,117,117,117,117,117,117,117,117,117,232,233,157,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117]",
+                    "width": 160,
+                    "height": 25,
+                    "tileWidth": 16,
+                    "tileHeight": 16
+                },
+                {
+                    "name": "collisionsLayer",
+                    "data": "[1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,0,0,0,0,0,0,0,0,0,1,1,1,1,1,1,1,1,1,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,1,1,1,1,1,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,1,0,0,0,0,0,0,0,0,0,1,1,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,1,1,1,1,1,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,1,0,0,0,0,0,0,0,0,0,1,1,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,1,1,0,0,0,0,0,0,0,0,1,1,0,0,0,0,0,0,0,0,0,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,7,0,0,0,0,0,0,7,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,1,1,0,0,0,0,0,0,0,1,1,0,0,0,0,0,0,0,0,0,0,1,1,1,1,1,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,2,2,2,2,2,2,1,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,1,1,1,0,0,0,0,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,4,2,1,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,1,1,1,0,0,0,0,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,4,0,1,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,0,0,1,1,1,1,0,0,0,0,0,0,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,1,0,0,0,0,0,0,0,1,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,1,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,1,2,2,2,2,0,0,0,0,0,0,0,0,0,1,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,1,0,0,0,0,0,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,4,0,0,0,0,0,0,0,0,0,0,1,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,0,0,0,0,0,0,0,0,3,0,0,0,0,0,3,0,0,0,0,0,0,0,0,1,1,1,1,1,0,0,0,0,0,0,1,1,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,1,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,4,0,0,0,0,0,0,0,0,0,0,1,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,8,8,0,0,0,0,0,0,0,0,0,1,1,0,0,0,0,0,0,0,0,0,1,1,1,1,1,0,0,0,0,0,0,0,0,0,1,0,0,0,1,0,0,0,0,0,0,1,0,0,0,1,1,1,1,1,1,1,0,0,0,0,0,1,1,1,1,1,1,1,1,0,0,0,1,0,0,0,0,0,1,1,1,1,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,1,1,1,1,1,0,0,0,1,0,0,4,0,0,5,5,5,5,5,5,5,5,1,0,0,1,0,0,0,0,0,0,0,0,0,1,1,1,1,1,1,1,1,1,1,0,0,0,0,0,0,0,0,0,0,8,8,0,0,0,0,0,0,0,0,0,1,1,1,1,1,1,1,1,1,1,1,1,0,0,0,0,1,1,1,1,1,1,1,1,1,0,0,0,0,1,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,1,0,0,0,0,0,0,1,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,1,0,0,0,1,0,0,4,0,0,1,1,1,1,1,1,1,1,1,0,0,1,1,1,1,1,1,1,1,1,1,1,0,0,0,0,0,0,0,0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,5,5,5,5,5,5,1,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,1,0,0,0,0,0,0,1,5,5,5,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,1,0,0,0,1,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,0,0,0,0,0,0,1,1,1,1,1,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,0,0,1,1,0,0,0,0,0,0,1,1,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]",
+                    "width": 160,
+                    "height": 25,
+                    "tileWidth": 16,
+                    "tileHeight": 16
+                }
+            ]
+        },
+        {
+            "id": "2efa93cc-6066-4713-b268-abf96de591e5",
+            "type": "Collider",
+            "label": "playerVsFloor",
+            "scope": "LOCAL",
+            "object1": "player",
+            "object2": "collisionsLayer",
+            "collideCallback": "this.playerVsFloor",
+            "processCallback": "(p, t) => p.alive && t.index !== 4",
+            "callbackContext": "this"
+        },
+        {
+            "id": "376e67a2-82a6-4e51-a75a-11e5e9b905de",
+            "type": "Keyboard.Key",
+            "label": "jumpKey"
+        },
+        {
+            "id": "371235b6-d113-413a-a455-4a94fcb45d21",
+            "type": "Keyboard.Key",
+            "label": "leftKey",
+            "keyCode": "LEFT"
+        },
+        {
+            "id": "387e2a64-26ad-40f7-9ded-768919cb3a77",
+            "type": "Keyboard.Key",
+            "label": "rightKey",
+            "keyCode": "RIGHT"
+        },
+        {
+            "id": "d1841eaf-de2e-4578-a59f-e3dfb76e7e3e",
+            "type": "Keyboard.Key",
+            "label": "downKey",
+            "keyCode": "DOWN"
+        },
+        {
+            "id": "429bb14b-a37f-4837-8351-5d07d1453d62",
+            "type": "Keyboard.Key",
+            "label": "upKey",
+            "keyCode": "UP"
+        },
+        {
+            "id": "abf28d74-8fe2-4c9a-8938-7955804f2e32",
+            "type": "Collider",
+            "label": "enemiesVsCollision",
+            "scope": "LOCAL",
+            "object1": "enemiesLayer.list",
+            "object2": "collisionsLayer"
+        },
+        {
+            "id": "1e3947de-8585-4bfb-9c66-eaca352d8435",
+            "type": "Collider",
+            "label": "chestVsCollision",
+            "scope": "LOCAL",
+            "object1": "chestLayer.list",
+            "object2": "collisionsLayer"
+        },
+        {
+            "id": "a3b5ddb6-01de-48a2-a766-2b841bb1653a",
+            "type": "Collider",
+            "label": "lootVsCollision",
+            "scope": "LOCAL",
+            "object1": "lootLayer.list",
+            "object2": "collisionsLayer"
+        },
+        {
+            "id": "0754b353-1b12-449d-8aca-a28fe1129781",
+            "type": "Collider",
+            "label": "playerVsLadder",
+            "scope": "LOCAL",
+            "object1": "player",
+            "object2": "collisionsLayer",
+            "overlapOnly": true,
+            "collideCallback": "this.playerVsLadder",
+            "processCallback": "(p, t) => t.index === 4",
+            "callbackContext": "this"
+        },
+        {
+            "id": "725095a6-12bc-4566-9a5f-54b517fb0124",
+            "type": "Collider",
+            "label": "playerVsEnemies",
+            "scope": "LOCAL",
+            "object1": "player",
+            "object2": "enemiesLayer.list",
+            "overlapOnly": true,
+            "collideCallback": "this.playerVsEnemies",
+            "processCallback": "this.playerIsAlive",
+            "callbackContext": "this"
+        },
+        {
+            "id": "8176556e-04bc-4d5c-bc14-9b3950e0ded3",
+            "type": "Collider",
+            "label": "playerVsCarrots",
+            "scope": "LOCAL",
+            "object1": "player",
+            "object2": "carrotsLayer.list",
+            "overlapOnly": true,
+            "collideCallback": "this.playerVsCarrots",
+            "processCallback": "this.playerIsAlive",
+            "callbackContext": "this"
+        },
+        {
+            "id": "4bc6a3db-a80a-44cf-b942-6ad0fb4999c5",
+            "type": "Collider",
+            "label": "playerVsStar",
+            "scope": "LOCAL",
+            "object1": "player",
+            "object2": "starsLayer.list",
+            "overlapOnly": true,
+            "collideCallback": "this.playerVsStar",
+            "processCallback": "this.playerIsAlive",
+            "callbackContext": "this"
+        },
+        {
+            "id": "fdbb8348-3b5a-4e88-bcac-e4dec371216c",
+            "type": "Collider",
+            "label": "playerVsChest",
+            "scope": "LOCAL",
+            "object1": "player",
+            "object2": "chestLayer.list",
+            "overlapOnly": true,
+            "collideCallback": "this.playerVsChest",
+            "processCallback": "this.playerIsAlive",
+            "callbackContext": "this"
+        },
+        {
+            "id": "12bf8146-abd7-4b7f-ab99-7c5ab3f38373",
+            "type": "Collider",
+            "label": "playerVsLoot",
+            "scope": "LOCAL",
+            "object1": "player",
+            "object2": "lootLayer.list",
+            "overlapOnly": true,
+            "collideCallback": "this.playerVsLoot",
+            "processCallback": "this.playerIsAlive",
+            "callbackContext": "this"
+        },
+        {
+            "id": "3ba5cac3-f567-436d-9f3e-2d25c18d0555",
+            "type": "Collider",
+            "label": "slugVsZones",
+            "scope": "LOCAL",
+            "object1": "enemiesLayer.list",
+            "object2": "slugZoneLayer.list"
+        }
+    ],
+    "meta": {
+        "app": "Phaser Editor - Scene Editor",
+        "url": "https://phaser.io/editor",
+        "contentType": "phasereditor2d.core.scene.SceneContentType",
+        "version": 5
+    }
+}

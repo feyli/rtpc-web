@@ -1,0 +1,39 @@
+{
+    "components": [
+        {
+            "name": "FixedToCameraComp",
+            "displayName": "Fixed to camera",
+            "objectDisplayFormat": "",
+            "baseClass": "UserComponent",
+            "gameObjectType": "Phaser.GameObjects.Image",
+            "properties": []
+        },
+        {
+            "name": "ParallaxComp",
+            "displayName": "Parallax background",
+            "objectDisplayFormat": "",
+            "baseClass": "UserComponent",
+            "gameObjectType": "Phaser.GameObjects.TileSprite",
+            "properties": [
+                {
+                    "name": "factor",
+                    "label": "Factor",
+                    "tooltip": "",
+                    "defValue": 0.5,
+                    "customDefinition": false,
+                    "type": {
+                        "id": "number"
+                    }
+                }
+            ]
+        }
+    ],
+    "meta": {
+        "app": "Phaser Editor 2D - User Components Editor",
+        "url": "https://phasereditor2d.com",
+        "contentType": "phasereditor2d.core.scene.UserComponents"
+    },
+    "exportClass": true,
+    "autoImport": true,
+    "importFileExtension": true
+}
