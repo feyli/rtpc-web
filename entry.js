@@ -1,2 +1,2 @@
-import './src/main';
+import './src/main.js'
 import './blockly/main.js';

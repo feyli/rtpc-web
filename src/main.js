@@ -2,10 +2,11 @@ import GameOver from "./scenes/GameOver.js";
 import Home from "./scenes/Home.js";
 import Level from "./scenes/Level.js";
 import Preload from "./scenes/Preload.js";
+export const ee = new Phaser.Events.EventEmitter();
 
 window.addEventListener('load', function () {
 
-	var game = new Phaser.Game({
+	let game = new Phaser.Game({
 		width: 320,
 		height: 240,
 		parent: 'game',
@@ -25,6 +26,7 @@ window.addEventListener('load', function () {
 			}
 		}
 	});
+
 
 	game.scene.add("Preload", Preload);
 	game.scene.add("Home", Home);
