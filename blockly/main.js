@@ -18,24 +18,6 @@ const toolbox = {
         {
             kind: 'block',
             type: 'right'
-        },
-        {
-            kind: 'block',
-            type: 'jump'
-        },
-        {
-            kind: 'block',
-            type: 'controls_repeat_ext',
-            inputs: {
-                TIMES: {
-                    shadow: {
-                        type: 'math_number',
-                        fields: {
-                            NUM: 10
-                        }
-                    }
-                }
-            }
         }
     ]
 }
@@ -58,15 +40,6 @@ Blockly.Blocks['right'] = {
         this.setColour(160);
     }
 };
-
-Blockly.Blocks['jump'] = {
-    init: function() {
-        this.appendDummyInput().appendField("Sauter");
-        this.setPreviousStatement(true);
-        this.setNextStatement(true);
-        this.setColour(160);
-    }
-}
 
 Blockly.Blocks['controls_repeat_ext'] = {
     init: function() {
@@ -92,10 +65,6 @@ function moveRight() {
 
 function moveLeft() {
     ee.emit('moveLeft');
-}
-
-function jump() {
-    ee.emit('jump');
 }
 
 javascriptGenerator.forBlock['left'] = function() {

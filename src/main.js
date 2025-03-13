@@ -1,49 +1,21 @@
-import GameOver from "./scenes/GameOver.js";
-import Home from "./scenes/Home.js";
-import Level from "./scenes/Level.js";
-import Preload from "./scenes/Preload.js";
+import Phaser from 'phaser';
+import Preload from './scenes/Preload.js';
+import Level1 from './scenes/Level1.js';
+import Level2 from './scenes/Level2.js';
+
 export const ee = new Phaser.Events.EventEmitter();
 
-window.addEventListener('load', function () {
-
-	let game = new Phaser.Game({
-		width: 320,
-		height: 240,
-		parent: 'game',
-		type: Phaser.AUTO,
-        backgroundColor: "#242424",
-		render: {
-			pixelArt: true
-		},
-		scale: {
-			mode: Phaser.Scale.FIT,
-			autoCenter: Phaser.Scale.CENTER_BOTH
-		},
-		physics: {
-			default: "arcade",
-			arcade: {
-				debug: true
-			}
-		}
-	});
-
-
-	game.scene.add("Preload", Preload);
-	game.scene.add("Home", Home);
-	game.scene.add("Level", Level);
-	game.scene.add("GameOver", GameOver);
-	game.scene.add("Boot", Boot, true);
+window.addEventListener('load', () => {
+  const config = {
+    type: Phaser.CANVAS,
+    width: 800,
+    height: 800,
+    parent: 'game',
+    physics: {
+      default: 'arcade',
+      arcade: { debug: false }
+    },
+    scene: [Preload, Level1, Level2]
+  };
+  new Phaser.Game(config);
 });
-
-class Boot extends Phaser.Scene {
-
-	preload() {
-		
-		this.load.pack("pack", "assets/preload-asset-pack.json");
-	}
-
-	create() {
-
-		this.scene.start("Preload");
-	}
-}

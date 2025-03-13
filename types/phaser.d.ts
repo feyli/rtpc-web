@@ -94125,7 +94125,7 @@ declare namespace Phaser {
         }
 
         /**
-         * A Scene Level Plugin is installed into every Scene and belongs to that Scene.
+         * A Scene Level1 Plugin is installed into every Scene and belongs to that Scene.
          * It can listen for Scene events and respond to them.
          * It can map itself to a Scene property, or into the Scene Systems, or both.
          */
@@ -117208,7 +117208,7 @@ declare namespace Phaser {
              * You can optionally provide a prefix and / or suffix string. If given the array will contain
              * strings, not integers. For example:
              * 
-             * `var array = Phaser.Utils.Array.NumberArray(1, 4, 'Level '); // array = ["Level 1", "Level 2", "Level 3", "Level 4"]`
+             * `var array = Phaser.Utils.Array.NumberArray(1, 4, 'Level1 '); // array = ["Level1 1", "Level1 2", "Level1 3", "Level1 4"]`
              * `var array = Phaser.Utils.Array.NumberArray(5, 7, 'HD-', '.png'); // array = ["HD-5.png", "HD-6.png", "HD-7.png"]`
              * @param start The minimum value the array starts with.
              * @param end The maximum value the array contains.
