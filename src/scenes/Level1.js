@@ -16,13 +16,18 @@ export default class Level1 extends BaseScene {
 
         // Background
         const bg = this.add.image(0, 0, 'floor').setScale(1);
+        //calcule léchelle de la scène 
+        const scaleX = this.scale.width / bg.width;
+        const scaleY = this.scale.height / bg.height;
+        const scale = Math.max(scaleX, scaleY); 
+        bg.setScale(scale);
         bg.x = bg.displayWidth / 2;
         bg.y = bg.displayHeight / 2;
         xLimit = bg.displayWidth;
         yLimit = bg.displayHeight;
 
         // Player
-        player = this.physics.add.sprite(300, 300, 'circle');
+        player = this.physics.add.sprite(400, 650, 'player');
         player.setScale(0.4);
 
         // Keyboard
@@ -30,8 +35,10 @@ export default class Level1 extends BaseScene {
 
         // Obstacles
         obstacles = this.physics.add.staticGroup();
-        obstacles.create(400, 500, 'obstacle');
-        obstacles.create(200, 250, 'obstacle');
+        obstacles.create(500, 200, 'object1');
+        obstacles.create(700, 400, 'object2');
+        obstacles.create(200, 300, 'object3');
+        obstacles.create(300, 500, 'object1');
         this.physics.add.collider(player, obstacles);
 
         // Camera bounds
