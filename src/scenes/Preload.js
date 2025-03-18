@@ -7,10 +7,10 @@ export default class Preload extends BaseScene {
 
     preload() {
         // Load shared assets once
-        this.load.image('floor', 'assets/placeholder.png');
-        this.load.image('floor2', 'assets/placeholder2.png');
-        this.load.image('circle', 'assets/circle.png');
-        this.load.image('obstacle', 'assets/obstacle.png');
+        this.load.image('floor', 'assets/placeholder.webp');
+        this.load.image('floor2', 'assets/placeholder2.webp');
+        this.load.image('circle', 'assets/circle.webp');
+        this.load.image('obstacle', 'assets/obstacle.webp');
     }
 
     create() {
