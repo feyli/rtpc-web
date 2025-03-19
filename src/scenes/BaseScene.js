@@ -1,5 +1,4 @@
 import Phaser from 'phaser';
-import { ee } from '../main.js';
 
 export default class BaseScene extends Phaser.Scene {
     constructor(key) {
@@ -7,16 +6,8 @@ export default class BaseScene extends Phaser.Scene {
     }
 
     createShared() {
-        // Example: listen for events from the emitter
-        ee.on('moveLeft', () => {
-            // To be completed
-        });
-        ee.on('moveRight', () => {
-            // To be completed
-        });
-    }
+        this.add.image(0, 0, 'floor').setScale(1).setDisplayOrigin(0, 0);
 
-    showGrid() {
         const grid = this.add.image(0, 0, 'quadrillage').setScale(1);
         grid.x = grid.displayWidth / 2;
         grid.y = grid.displayHeight / 2;

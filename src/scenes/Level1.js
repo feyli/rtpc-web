@@ -4,8 +4,8 @@ import BaseScene from './BaseScene.js';
 let player;
 let scraps;
 let cursors;
-let xLimit;
-let yLimit;
+const xLimit = 256;
+const yLimit = 256;
 
 export default class Level1 extends BaseScene {
     constructor() {
@@ -14,20 +14,6 @@ export default class Level1 extends BaseScene {
 
     create() {
         this.createShared();
-
-        /// Background
-        const bg = this.add.image(0, 0, 'floor').setScale(1);
-        //calcule léchelle de la scène 
-        const scaleX = this.scale.width / bg.width;
-        const scaleY = this.scale.height / bg.height;
-        const scale = Math.max(scaleX, scaleY); 
-        bg.setScale(scale);
-        bg.x = bg.displayWidth / 2;
-        bg.y = bg.displayHeight / 2;
-        xLimit = 256;
-        yLimit = 256;
-
-        this.showGrid();
 
         // Player
         player = this.physics.add.sprite(0, 0, 'kidside1').setDisplayOrigin(0, 0);
