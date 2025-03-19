@@ -1,11 +1,9 @@
 // filepath: /Users/mathis/Documents/dev/rtpc-web/src/scenes/Level1.js
 import BaseScene from './BaseScene.js';
 
-let player;
 let scraps;
 let cursors;
-const xLimit = 256;
-const yLimit = 256;
+let player;
 
 export default class Level1 extends BaseScene {
     constructor() {
@@ -15,8 +13,8 @@ export default class Level1 extends BaseScene {
     create() {
         this.createShared();
 
-        // Player
-        player = this.physics.add.sprite(128, 128, 'kidside1').setDisplayOrigin(0, 0);
+        // player
+        player = this.physics.add.sprite(2*32, 4*32, 'kidside1').setDisplayOrigin(0, 0);
         player.setScale(1);
         player.setFlipX(true);
 
@@ -31,46 +29,31 @@ export default class Level1 extends BaseScene {
 
         // Scraps
         scraps = this.physics.add.staticGroup();
-        scraps.create(96, 192, 'object1').setDisplayOrigin(0, 0);
-        scraps.create(192, 160, 'object2').setDisplayOrigin(0, 0);
-        scraps.create(160, 32, 'object3').setDisplayOrigin(0, 0);
-        scraps.create(32, 32, 'object1').setDisplayOrigin(0, 0);
+        scraps.create(5*32, 4*32, 'object1').setDisplayOrigin(0, 0);
+        scraps.create(5*32, 0, 'object2').setDisplayOrigin(0, 0);
 
         scraps.refresh();
 
-        const scrapCollider = this.physics.add.collider(player, scraps, (player, scrap) => {
+        this.physics.add.overlap(player, scraps, (player, scrap) => {
+            if (player.x !== scrap.x || player.y !== scrap.y) return;
+
             scrap.destroy();
-            ladder.setTexture('ladder' + ++ladderState);
+            ladderState += 2;
+            ladder.setTexture('ladder' + ladderState);
         });
 
-        scrapCollider.overlapOnly = true;
+        const ladderCollider = this.physics.add.overlap(player, ladder, () => {
+            if (player.x !== ladder.x || player.y !== ladder.y) return;
 
-        const ladderCollider = this.physics.add.collider(player, ladderGroup, () => {
             if (ladderState === 4) this.scene.start('Level2');
-        })
+        });
 
         ladderCollider.overlapOnly = true;
 
         // Camera bounds
-        this.cameras.main.setBounds(0, 0, xLimit, yLimit);
+        this.cameras.main.setBounds(0, 0, this.xLimit, this.yLimit);
+        player.setToTop();
     }
 
-    update() {
-        // Movement
-        if (cursors.left.isDown && player.x >= 0) {
-            player.setVelocityX(-200);
-        } else if (cursors.right.isDown && player.x <= xLimit) {
-            player.setVelocityX(200);
-        } else {
-            player.setVelocityX(0);
-        }
-
-        if (cursors.up.isDown && player.y >= 0) {
-            player.setVelocityY(-200);
-        } else if (cursors.down.isDown && player.y <= yLimit) {
-            player.setVelocityY(200);
-        } else {
-            player.setVelocityY(0);
-        }
-    }
+    update() { this.updateShared(player) };
 }

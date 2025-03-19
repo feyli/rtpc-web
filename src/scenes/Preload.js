@@ -7,28 +7,28 @@ export default class Preload extends BaseScene {
 
     preload() {
         // Load shared assets once
-        this.load.image('floor', 'assets/background288.png');
-        this.load.image('floor2', 'assets/placeholder2.png');
-        this.load.image('player', 'assets/circle.png');
-        this.load.image('object1', 'assets/metal_can.png');
-        this.load.image('object2', 'assets/metal_pipe.png');
-        this.load.image('object3', 'assets/metal_plate.png');
-        this.load.image('ladder1', 'assets/ladder_step_1.png');
-        this.load.image('ladder2', 'assets/ladder_step_2.png');
-        this.load.image('ladder3', 'assets/ladder_step_3.png');
-        this.load.image('ladder4', 'assets/ladder_step_4.png');
-        this.load.image('obstacle', 'assets/obstacle.png');
-        this.load.image('kidside1', 'assets/kid_side1.png');
-        this.load.image('kidside2', 'assets/kid_side2.png');
-        this.load.image('kidback1', 'assets/kid_back1.png');
-        this.load.image('kidback2', 'assets/kid_back2.png');
-        this.load.image('kidback3', 'assets/kid_back3.png');
-        this.load.image('kidback4', 'assets/kid_back4.png');
-        this.load.image('kidfront1', 'assets/kid_front1.png');
-        this.load.image('kidfront2', 'assets/kid_front2.png');
-        this.load.image('kidfront3', 'assets/kid_front3.png');
-        this.load.image('kidfront4', 'assets/kid_front4.png');
-        this.load.image('quadrillage', 'assets/quadrillage.png');
+        this.load.image('floor', 'assets/background288.webp');
+        this.load.image('floor2', 'assets/placeholder2.webp');
+        this.load.image('player', 'assets/circle.webp');
+        this.load.image('object1', 'assets/metal_pipe.webp');
+        this.load.image('object2', 'assets/metal_plate.webp');
+        this.load.image('object3', 'assets/metal_can.webp');
+        this.load.image('ladder1', 'assets/ladder_step_1.webp');
+        this.load.image('ladder2', 'assets/ladder_step_2.webp');
+        this.load.image('ladder3', 'assets/ladder_step_3.webp');
+        this.load.image('ladder4', 'assets/ladder_step_4.webp');
+        this.load.image('obstacle', 'assets/obstacle.webp');
+        this.load.image('kidside1', 'assets/kid_side1.webp');
+        this.load.image('kidside2', 'assets/kid_side2.webp');
+        this.load.image('kidback1', 'assets/kid_back1.webp');
+        this.load.image('kidback2', 'assets/kid_back2.webp');
+        this.load.image('kidback3', 'assets/kid_back3.webp');
+        this.load.image('kidback4', 'assets/kid_back4.webp');
+        this.load.image('kidfront1', 'assets/kid_front1.webp');
+        this.load.image('kidfront2', 'assets/kid_front2.webp');
+        this.load.image('kidfront3', 'assets/kid_front3.webp');
+        this.load.image('kidfront4', 'assets/kid_front4.webp');
+        this.load.image('quadrillage', 'assets/quadrillage.webp');
 
         // Load walls
         this.load.image('wallbotleft', 'assets/wall_bottom_left.webp');
