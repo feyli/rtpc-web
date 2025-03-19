@@ -21,8 +21,17 @@ export default class Preload extends BaseScene {
         this.load.image('ladder3', 'assets/ladder_step_3.png');
         this.load.image('ladder4', 'assets/ladder_step_4.png');
         this.load.image('obstacle', 'assets/obstacle.png');
-
-        this.load.image('cadrillage', 'assets/cadrilage.png');
+        this.load.image('kidside1', 'assets/kid_side1.png');
+        this.load.image('kidside2', 'assets/kid_side2.png');
+        this.load.image('kidback1', 'assets/kid_back1.png');
+        this.load.image('kidback2', 'assets/kid_back2.png');
+        this.load.image('kidback3', 'assets/kid_back3.png');
+        this.load.image('kidback4', 'assets/kid_back4.png');
+        this.load.image('kidfront1', 'assets/kid_front1.png');
+        this.load.image('kidfront2', 'assets/kid_front2.png');
+        this.load.image('kidfront3', 'assets/kid_front3.png');
+        this.load.image('kidfront4', 'assets/kid_front4.png');
+        this.load.image('quadrillage', 'assets/quadrillage.png');
     }
 
     create() {

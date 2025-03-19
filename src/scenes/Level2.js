@@ -6,7 +6,7 @@ let cursors;
 let xLimit;
 let yLimit;
 
-export default class Level1 extends BaseScene {
+export default class Level2 extends BaseScene {
     constructor() {
         super('Level2');
     }
