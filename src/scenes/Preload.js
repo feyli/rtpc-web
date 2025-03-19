@@ -36,6 +36,6 @@ export default class Preload extends BaseScene {
 
     create() {
         // Proceed to Level1 when ready
-        this.scene.start('Level1');
+        this.scene.start('Level5');
     }
 }

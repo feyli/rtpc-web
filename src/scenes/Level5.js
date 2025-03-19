@@ -7,9 +7,9 @@ let wall;
 const xLimit = 256;
 const yLimit = 256;
 
-export default class Level4 extends BaseScene {
+export default class Level5 extends BaseScene {
     constructor() {
-        super('Level4');
+        super('Level5');
     }
 
     create() {
@@ -26,21 +26,21 @@ export default class Level4 extends BaseScene {
         // Ladder
         let ladderState = 0;
         const ladderGroup = this.physics.add.staticGroup();
-        const ladder = ladderGroup.create(128, 160, 'ladder0').setDisplayOrigin(0, 0);
+        const ladder = ladderGroup.create(128, 0, 'ladder0').setDisplayOrigin(0, 0);
         ladderGroup.refresh();
 
         //wall 
         wall = this.physics.add.staticGroup();
-        
+        wall.create(100, 100, 'wall3')
         this.physics.add.collider(player, wall);
 
 
         // Scraps
         scraps = this.physics.add.staticGroup();
-        scraps.create(0, 256, 'object1').setDisplayOrigin(0, 0);
-        scraps.create(64, 192, 'object2').setDisplayOrigin(0, 0);
-        scraps.create(192, 128, 'object3').setDisplayOrigin(0, 0);
-        scraps.create(256, 192, 'object1').setDisplayOrigin(0, 0);
+        scraps.create(0, 128, 'object1').setDisplayOrigin(0, 0);
+        scraps.create(96, 0, 'object2').setDisplayOrigin(0, 0);
+        scraps.create(160, 0, 'object3').setDisplayOrigin(0, 0);
+        scraps.create(256, 128, 'object1').setDisplayOrigin(0, 0);
 
         scraps.refresh();
 
@@ -52,7 +52,7 @@ export default class Level4 extends BaseScene {
         scrapCollider.overlapOnly = true;
 
         const ladderCollider = this.physics.add.collider(player, ladderGroup, () => {
-            if (ladderState === 4) this.scene.start('Level5');
+            if (ladderState === 4) this.scene.start('Level4');
         })
 
         ladderCollider.overlapOnly = true;

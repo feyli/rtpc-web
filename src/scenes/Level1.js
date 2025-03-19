@@ -46,7 +46,7 @@ export default class Level1 extends BaseScene {
         scrapCollider.overlapOnly = true;
 
         const ladderCollider = this.physics.add.collider(player, ladderGroup, () => {
-            if (ladderState === 4) this.scene.start('Level2');
+            if (ladderState === 4) this.scene.start('Level4');
         })
 
         ladderCollider.overlapOnly = true;
