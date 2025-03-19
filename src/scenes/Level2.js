@@ -2,11 +2,12 @@ import BaseScene from './BaseScene.js';
 
 let player;
 let obstacles;
+let scraps;
 let cursors;
-let xLimit;
-let yLimit;
+let xLimit = 256;
+let yLimit = 256;
 
-export default class Level1 extends BaseScene {
+export default class Level2 extends BaseScene {
     constructor() {
         super('Level2');
     }
@@ -14,24 +15,59 @@ export default class Level1 extends BaseScene {
     create() {
         this.createShared();
 
-        // Background
-        const bg = this.add.image(0, 0, 'floor2').setScale(1);
-        bg.x = bg.displayWidth / 2;
-        bg.y = bg.displayHeight / 2;
-        xLimit = bg.displayWidth;
-        yLimit = bg.displayHeight;
-
         // Player
-        player = this.player;
+        player = this.physics.add.sprite(0, 0, 'kidside1').setDisplayOrigin(0, 0);
+        player.setScale(1);
+        player.setFlipX(true);
+
 
         // Keyboard
         cursors = this.input.keyboard.createCursorKeys();
 
         // Obstacles
         obstacles = this.physics.add.staticGroup();
-        obstacles.create(400, 500, 'obstacle');
-        obstacles.create(200, 250, 'obstacle');
+        obstacles.create(0, 128, 'hollwallbottop').setOrigin(0, 0);
+        obstacles.create(32, 128, 'hollwallbotright').setOrigin(0, 0);
+        obstacles.create(32, 96, 'hollwallright').setOrigin(0, 0);
+        obstacles.create(96, 0, 'hollwallright').setOrigin(0, 0);
+        obstacles.create(96, 32, 'hollwallbotleft').setOrigin(0, 0);
+        obstacles.create(128, 32, 'hollwallbottop').setOrigin(0, 0);
+        obstacles.create(256, 64, 'hollwallbottop').setOrigin(0, 0);
+        obstacles.create(224, 64, 'hollwallupleft').setOrigin(0, 0);
+        obstacles.create(224, 96, 'hollwallright').setOrigin(0, 0);
+        obstacles.create(224, 224, 'hollwallright').setOrigin(0, 0);
+        obstacles.create(224, 256, 'hollwallright').setOrigin(0, 0);
+        obstacles.refresh();
+    
         this.physics.add.collider(player, obstacles);
+
+        // Ladder
+        let ladderState = 0;
+        const ladderGroup = this.physics.add.staticGroup();
+        const ladder = ladderGroup.create(256, 0, 'ladder0').setDisplayOrigin(0, 0);
+        ladderGroup.refresh();
+
+        // Scraps
+        scraps = this.physics.add.staticGroup();
+        scraps.create(96, 192, 'object1').setDisplayOrigin(0, 0);
+        scraps.create(192, 160, 'object2').setDisplayOrigin(0, 0);
+        scraps.create(160, 32, 'object3').setDisplayOrigin(0, 0);
+        scraps.create(32, 32, 'object1').setDisplayOrigin(0, 0);
+
+        scraps.refresh();
+
+        const scrapCollider = this.physics.add.collider(player, scraps, (player, scrap) => {
+            scrap.destroy();
+            ladder.setTexture('ladder' + ++ladderState);
+        });
+
+        scrapCollider.overlapOnly = true;
+
+        const ladderCollider = this.physics.add.collider(player, ladderGroup, () => {
+            if (ladderState === 4) this.scene.start('Level2');
+        })
+
+        ladderCollider.overlapOnly = true;
 
         // Camera bounds
         this.cameras.main.setBounds(0, 0, xLimit, yLimit);
@@ -53,6 +89,11 @@ export default class Level1 extends BaseScene {
             player.setVelocityY(200);
         } else {
             player.setVelocityY(0);
+        }
+
+        if (player.x > 700) {
+            // Change scene
+            this.scene.start('Level1');
         }
     }
 }
