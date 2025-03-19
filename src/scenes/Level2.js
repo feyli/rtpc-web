@@ -16,7 +16,7 @@ export default class Level2 extends BaseScene {
         this.createShared();
 
         // Player
-        player = this.physics.add.sprite(0, 0, 'kidside1').setDisplayOrigin(0, 0);
+        player = this.physics.add.sprite(64, 256, 'kidside1').setDisplayOrigin(0, 0);
         player.setScale(1);
         player.setFlipX(true);
 
@@ -44,15 +44,15 @@ export default class Level2 extends BaseScene {
         // Ladder
         let ladderState = 0;
         const ladderGroup = this.physics.add.staticGroup();
-        const ladder = ladderGroup.create(256, 0, 'ladder0').setDisplayOrigin(0, 0);
+        const ladder = ladderGroup.create(128, 0, 'ladder0').setDisplayOrigin(0, 0);
         ladderGroup.refresh();
 
         // Scraps
         scraps = this.physics.add.staticGroup();
-        scraps.create(96, 192, 'object1').setDisplayOrigin(0, 0);
-        scraps.create(192, 160, 'object2').setDisplayOrigin(0, 0);
-        scraps.create(160, 32, 'object3').setDisplayOrigin(0, 0);
-        scraps.create(32, 32, 'object1').setDisplayOrigin(0, 0);
+        scraps.create(0, 96, 'object1').setDisplayOrigin(0, 0);
+        scraps.create(256, 96, 'object2').setDisplayOrigin(0, 0);
+        scraps.create(256, 256, 'object3').setDisplayOrigin(0, 0);
+        scraps.create(128, 128, 'object1').setDisplayOrigin(0, 0);
 
         scraps.refresh();
 
@@ -64,36 +64,15 @@ export default class Level2 extends BaseScene {
         scrapCollider.overlapOnly = true;
 
         const ladderCollider = this.physics.add.collider(player, ladderGroup, () => {
-            if (ladderState === 4) this.scene.start('Level2');
+            if (ladderState === 4) this.scene.start('Level3');
         })
 
         ladderCollider.overlapOnly = true;
 
         // Camera bounds
-        this.cameras.main.setBounds(0, 0, xLimit, yLimit);
+        this.cameras.main.setBounds(0, 0, this.xLimit, this.yLimit);
+        player.setToTop();
     }
 
-    update() {
-        // Movement
-        if (cursors.left.isDown && player.x >= 0) {
-            player.setVelocityX(-200);
-        } else if (cursors.right.isDown && player.x <= xLimit) {
-            player.setVelocityX(200);
-        } else {
-            player.setVelocityX(0);
-        }
-
-        if (cursors.up.isDown && player.y >= 0) {
-            player.setVelocityY(-200);
-        } else if (cursors.down.isDown && player.y <= yLimit) {
-            player.setVelocityY(200);
-        } else {
-            player.setVelocityY(0);
-        }
-
-        if (player.x > 700) {
-            // Change scene
-            this.scene.start('Level1');
-        }
-    }
+    update() { this.updateShared(player) };
 }
