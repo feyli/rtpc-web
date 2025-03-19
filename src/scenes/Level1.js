@@ -16,7 +16,7 @@ export default class Level1 extends BaseScene {
         this.createShared();
 
         // Player
-        player = this.physics.add.sprite(0, 0, 'kidside1').setDisplayOrigin(0, 0);
+        player = this.physics.add.sprite(128, 128, 'kidside1').setDisplayOrigin(0, 0);
         player.setScale(1);
         player.setFlipX(true);
 
@@ -46,7 +46,7 @@ export default class Level1 extends BaseScene {
         scrapCollider.overlapOnly = true;
 
         const ladderCollider = this.physics.add.collider(player, ladderGroup, () => {
-            if (ladderState === 4) this.scene.start('Level4');
+            if (ladderState === 4) this.scene.start('Level2');
         })
 
         ladderCollider.overlapOnly = true;

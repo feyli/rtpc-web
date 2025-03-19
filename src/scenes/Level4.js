@@ -26,11 +26,45 @@ export default class Level4 extends BaseScene {
         // Ladder
         let ladderState = 0;
         const ladderGroup = this.physics.add.staticGroup();
-        const ladder = ladderGroup.create(128, 160, 'ladder0').setDisplayOrigin(0, 0);
+        const ladder = ladderGroup.create(128, 128, 'ladder0').setDisplayOrigin(0, 0);
         ladderGroup.refresh();
 
         //wall 
         wall = this.physics.add.staticGroup();
+        //wall.create(112, 144, 'wallbottom');
+
+        for (let i = 0; i < 7; i++){
+            wall.create(270-(32*i), 240, 'wallbottom');
+        }
+
+        for (let i = 0; i < 5; i++){
+            wall.create(46, 208-(32*i), 'wallleft');
+        }
+
+        for (let i = 0; i < 5; i++){
+            wall.create(78+(32*i), 50, 'walltop');
+        }
+
+        for (let i = 0; i < 3; i++){
+            wall.create(236, 80+(32*i), 'wallright');
+        }
+
+        for (let i = 0; i < 3; i++){
+            wall.create(210-(32*i), 176, 'wallbottom');
+        }
+
+        for (let i = 0; i < 2; i++){
+            wall.create(115, 146-(32*i), 'wallleft');
+        }
+
+        wall.create(46, 240, 'wallbotleft');
+        wall.create(46, 50, 'wallupleft');
+        wall.create(236, 50, 'wallupright');
+        wall.create(236, 176, 'wallbotright');
+        wall.create(115, 176, 'wallbotleft');
+
+
+        
         
         this.physics.add.collider(player, wall);
 

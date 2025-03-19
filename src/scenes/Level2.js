@@ -64,7 +64,7 @@ export default class Level2 extends BaseScene {
 
         if (player.x > 700) {
             // Change scene
-            this.scene.start('Level1');
+            this.scene.start('Level3');
         }
     }
 }

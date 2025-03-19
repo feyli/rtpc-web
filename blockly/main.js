@@ -1,3 +1,4 @@
+// filepath: /Users/mathis/Documents/dev/rtpc-web/blockly/main.js
 // Import Blockly core.
 import * as Blockly from 'blockly/core';
 // Import a generator.
@@ -18,6 +19,18 @@ const toolbox = {
         {
             kind: 'block',
             type: 'right'
+        },
+        {
+            kind: 'block',
+            type: 'up'
+        },
+        {
+            kind: 'block',
+            type: 'down'
+        },
+        {
+            kind: 'block',
+            type: 'controls_repeat_ext'
         }
     ]
 }
@@ -41,12 +54,30 @@ Blockly.Blocks['right'] = {
     }
 };
 
+Blockly.Blocks['up'] = {
+    init: function () {
+        this.appendDummyInput().appendField("Se déplacer vers le haut");
+        this.setPreviousStatement(true);
+        this.setNextStatement(true);
+        this.setColour(160);
+    }
+}
+
+Blockly.Blocks['down'] = {
+    init: function() {
+        this.appendDummyInput().appendField("Se déplacer vers le bas");
+        this.setPreviousStatement(true);
+        this.setNextStatement(true);
+        this.setColour(160);
+    }
+}
+
 Blockly.Blocks['controls_repeat_ext'] = {
     init: function() {
-        this.appendValueInput('TIMES')
-            .setCheck('Number')
-            .appendField('Répéter');
+        // Replaced value input with a numeric field
         this.appendDummyInput()
+            .appendField('Répéter')
+            .appendField(new Blockly.FieldNumber(1, 1), 'TIMES')
             .appendField('fois');
         this.setPreviousStatement(true);
         this.setNextStatement(true);
@@ -67,6 +98,14 @@ function moveLeft() {
     ee.emit('moveLeft');
 }
 
+function moveUp() {
+    ee.emit('moveUp');
+}
+
+function moveDown() {
+    ee.emit('moveDown');
+}
+
 javascriptGenerator.forBlock['left'] = function() {
     return `moveLeft();\n`;
 }
@@ -75,8 +114,12 @@ javascriptGenerator.forBlock['right'] = function() {
     return `moveRight();\n`;
 }
 
-javascriptGenerator.forBlock['jump'] = function() {
-    return `jump();\n`;
+javascriptGenerator.forBlock['up'] = function() {
+    return `moveUp();\n`;
+}
+
+javascriptGenerator.forBlock['down'] = function() {
+    return `moveDown();\n`;
 }
 
 const workspace = Blockly.inject('blocklyDiv', {
@@ -95,3 +138,4 @@ document.querySelector('#stop').addEventListener('click', () => {
     ee.emit('stop');
     console.log("emitted stop event");
 })
+

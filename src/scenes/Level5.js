@@ -16,7 +16,7 @@ export default class Level5 extends BaseScene {
         this.createShared();
 
         // Player
-        player = this.physics.add.sprite(256, 256, 'kidside1').setDisplayOrigin(0, 0);
+        player = this.physics.add.sprite(130, 256, 'kidback1').setDisplayOrigin(0, 0);
         player.setScale(1);
         player.setFlipX(true);
 
@@ -31,7 +31,34 @@ export default class Level5 extends BaseScene {
 
         //wall 
         wall = this.physics.add.staticGroup();
-        wall.create(100, 100, 'wall3')
+        //bas
+        wall.create(144, 240, 'wallbottom');
+        wall.create(176, 240, 'wallbottom');
+        wall.create(112, 240, 'wallbottom');
+        wall.create(80, 240, 'wallbotleft');
+        wall.create(208, 240, 'wallbotright');
+
+        
+        wall.create(144, 50, 'walltop');
+        wall.create(176, 50, 'walltop');
+        wall.create(112, 50, 'walltop');
+        wall.create(80, 50, 'wallupleft');
+        wall.create(208, 50, 'wallupright');
+
+        for (let i = 0; i < 6; i++){
+            wall.create(144, 50+(32*i), 'wallleft');
+        }
+
+        wall.create(14, 176, 'wallbottom');
+        wall.create(46, 176, 'wallbottom');
+        wall.create(78, 176, 'wallbotright');
+
+        wall.create(274, 176, 'wallbottom');
+        wall.create(242, 176, 'wallbottom');
+        wall.create(210, 176, 'wallbotleft');
+        
+
+
         this.physics.add.collider(player, wall);
 
 

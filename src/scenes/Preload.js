@@ -13,9 +13,6 @@ export default class Preload extends BaseScene {
         this.load.image('object1', 'assets/metal_can.png');
         this.load.image('object2', 'assets/metal_pipe.png');
         this.load.image('object3', 'assets/metal_plate.png');
-        this.load.image('wall1', 'assets/wall.png');
-        this.load.image('wall2', 'assets/wall_hollow.png');
-        this.load.image('wall3', 'assets/wall_side.png');
         this.load.image('ladder1', 'assets/ladder_step_1.png');
         this.load.image('ladder2', 'assets/ladder_step_2.png');
         this.load.image('ladder3', 'assets/ladder_step_3.png');
@@ -32,10 +29,27 @@ export default class Preload extends BaseScene {
         this.load.image('kidfront3', 'assets/kid_front3.png');
         this.load.image('kidfront4', 'assets/kid_front4.png');
         this.load.image('quadrillage', 'assets/quadrillage.png');
+
+        // Load walls
+        this.load.image('wallbotleft', 'assets/wall_bottom_left.webp');
+        this.load.image('wallbotright', 'assets/wall_bottom_right.webp');
+        this.load.image('wallupleft', 'assets/wall_top_left.webp');
+        this.load.image('wallupright', 'assets/wall_top_right.webp');
+        this.load.image('wallleft', 'assets/wall_left.webp');
+        this.load.image('wallright', 'assets/wall_right.webp');
+        this.load.image('walltop', 'assets/wall_top.webp');
+        this.load.image('wallbottom', 'assets/wall_bottom.webp');
+        this.load.image('hollwallbotleft', 'assets/wall_hollow_bottom_left.webp');
+        this.load.image('hollwallbotright', 'assets/wall_hollow_bottom_right.webp');
+        this.load.image('hollwallupleft', 'assets/wall_hollow_top_left.webp');
+        this.load.image('hollwallupright', 'assets/wall_hollow_top_right.webp');
+        this.load.image('hollwallleft', 'assets/wall_hollow_left.webp');
+        this.load.image('hollwallright', 'assets/wall_hollow_right.webp');
+        this.load.image('hollwallbottop', 'assets/wall_hollow_bottop.webp');
     }
 
     create() {
         // Proceed to Level1 when ready
-        this.scene.start('Level5');
+        this.scene.start('Level1');
     }
 }
