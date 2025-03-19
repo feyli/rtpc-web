@@ -20,15 +20,14 @@ export default class Preload extends BaseScene {
         this.load.image('obstacle', 'assets/obstacle.webp');
         this.load.image('kidside1', 'assets/kid_side1.webp');
         this.load.image('kidside2', 'assets/kid_side2.webp');
-        this.load.image('kidback1', 'assets/kid_back1.webp');
-        this.load.image('kidback2', 'assets/kid_back2.webp');
-        this.load.image('kidback3', 'assets/kid_back3.webp');
-        this.load.image('kidback4', 'assets/kid_back4.webp');
-        this.load.image('kidfront1', 'assets/kid_front1.webp');
-        this.load.image('kidfront2', 'assets/kid_front2.webp');
-        this.load.image('kidfront3', 'assets/kid_front3.webp');
-        this.load.image('kidfront4', 'assets/kid_front4.webp');
-        this.load.image('quadrillage', 'assets/quadrillage.webp');
+        this.load.image('kidup1', 'assets/kid_back1.webp');
+        this.load.image('kidup2', 'assets/kid_back2.webp');
+        this.load.image('kidup3', 'assets/kid_back3.webp');
+        this.load.image('kidup4', 'assets/kid_back4.webp');
+        this.load.image('kiddown1', 'assets/kid_front1.webp');
+        this.load.image('kiddown2', 'assets/kid_front2.webp');
+        this.load.image('kiddown3', 'assets/kid_front3.webp');
+        this.load.image('kiddown4', 'assets/kid_front4.webp');
 
         // Load walls
         this.load.image('wallbotleft', 'assets/wall_bottom_left.webp');
