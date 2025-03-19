@@ -2,7 +2,7 @@
 // Import Blockly core.
 import * as Blockly from 'blockly/core';
 // Import a generator.
-import {javascriptGenerator} from 'blockly/javascript';
+import { javascriptGenerator } from 'blockly/javascript';
 // Import a message file
 import * as Fr from 'blockly/msg/fr';
 import { ee } from "../src/main.js";
@@ -33,10 +33,10 @@ const toolbox = {
             type: 'controls_repeat_ext'
         }
     ]
-}
+};
 
 Blockly.Blocks['left'] = {
-    init: function() {
+    init: function () {
         this.appendDummyInput().appendField("Se déplacer à gauche");
         this.setPreviousStatement(true);
         this.setNextStatement(true);
@@ -46,7 +46,7 @@ Blockly.Blocks['left'] = {
 
 
 Blockly.Blocks['right'] = {
-    init: function() {
+    init: function () {
         this.appendDummyInput().appendField("Se déplacer à droite");
         this.setPreviousStatement(true);
         this.setNextStatement(true);
@@ -61,19 +61,19 @@ Blockly.Blocks['up'] = {
         this.setNextStatement(true);
         this.setColour(160);
     }
-}
+};
 
 Blockly.Blocks['down'] = {
-    init: function() {
+    init: function () {
         this.appendDummyInput().appendField("Se déplacer vers le bas");
         this.setPreviousStatement(true);
         this.setNextStatement(true);
         this.setColour(160);
     }
-}
+};
 
 Blockly.Blocks['controls_repeat_ext'] = {
-    init: function() {
+    init: function () {
         // Replaced value input with a numeric field
         this.appendDummyInput()
             .appendField('Répéter')
@@ -91,35 +91,47 @@ Blockly.Blocks['controls_repeat_ext'] = {
 
 
 function moveRight() {
-    ee.emit('moveRight');
+    window.queue.push('right');
 }
 
 function moveLeft() {
-    ee.emit('moveLeft');
+    window.queue.push('left');
 }
 
 function moveUp() {
-    ee.emit('moveUp');
+    window.queue.push('up');
 }
 
 function moveDown() {
-    ee.emit('moveDown');
+    window.queue.push('down');
 }
 
-javascriptGenerator.forBlock['left'] = function() {
+javascriptGenerator.forBlock['left'] = function () {
     return `moveLeft();\n`;
-}
+};
 
-javascriptGenerator.forBlock['right'] = function() {
+javascriptGenerator.forBlock['right'] = function () {
     return `moveRight();\n`;
-}
+};
 
-javascriptGenerator.forBlock['up'] = function() {
+javascriptGenerator.forBlock['up'] = function () {
     return `moveUp();\n`;
-}
+};
 
-javascriptGenerator.forBlock['down'] = function() {
+javascriptGenerator.forBlock['down'] = function () {
     return `moveDown();\n`;
+};
+
+javascriptGenerator.forBlock['controls_repeat_ext'] = function (block) {
+    const repeats = block.getFieldValue('TIMES');
+    const branch = javascriptGenerator.statementToCode(block, 'DO');
+    let code = '';
+
+    for (let i = 0; i < repeats; i++) {
+        code += branch;
+    }
+
+    return code;
 }
 
 const workspace = Blockly.inject('blocklyDiv', {
@@ -135,7 +147,6 @@ document.querySelector('#run').addEventListener('click', () => {
 });
 
 document.querySelector('#stop').addEventListener('click', () => {
-    ee.emit('stop');
-    console.log("emitted stop event");
-})
+    window.queue = [];
+});
 
