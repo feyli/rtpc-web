@@ -9,8 +9,8 @@ export const ee = new Phaser.Events.EventEmitter();
 window.addEventListener('load', () => {
   const config = {
     type: Phaser.CANVAS,
-    width: 800,
-    height: 800,
+    width: 288,
+    height: 288,
     parent: 'game',
     physics: {
       default: 'arcade',

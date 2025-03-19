@@ -21,6 +21,8 @@ export default class Preload extends BaseScene {
         this.load.image('ladder3', 'assets/ladder_step_3.png');
         this.load.image('ladder4', 'assets/ladder_step_4.png');
         this.load.image('obstacle', 'assets/obstacle.png');
+
+        this.load.image('cadrillage', 'assets/cadrilage.png');
     }
 
     create() {

@@ -36,38 +36,11 @@ export default class Level2s extends BaseScene {
 
         // Obstacles
         obstacles = this.physics.add.staticGroup();
-        obstacles.create(400, 500, 'wall3');
-        obstacles.create(400, 500, 'wall3');
-        obstacles.create(400, 500, 'wall3');
+        obstacles.create(400, 500, 'wall1');
+        obstacles.create(400, 500, 'wall1');
+        obstacles.create(400, 500, 'wall1');
         obstacles.angle += 90;  
         this.physics.add.collider(player, obstacles);
-
-        //map 
-        const mapData = [
-            [0, 0, 0, 0, 0, 0, 0, 0, 0],
-            [0, 1, 1, 1, 1, 1, 1, 1, 0],
-            [0, 1, 0, 0, 0, 0, 0, 1, 0],
-            [0, 1, 0, 1, 1, 1, 0, 1, 0],
-            [0, 1, 0, 1, 0, 0, 0, 1, 0],
-            [0, 1, 0, 1, 1, 1, 1, 1, 0],
-            [0, 1, 0, 0, 0, 0, 0, 0, 0],
-            [0, 1, 1, 1, 1, 1, 1, 1, 1],
-            [0, 0, 0, 0, 0, 0, 0, 0, 0]
-        ];
-
-        const tileTypes = ["rien", "wall1"];
-
-        function generateMap() {
-            const mapElement = document.getElementById("map");
-            mapElement.innerHTML = "";
-            mapData.forEach(row => {
-                row.forEach(tile => {
-                    const div = document.createElement("div");
-                    div.classList.add("tile", tileTypes[tile]);
-                    mapElement.appendChild(div);
-                });
-            });
-        }
 
         // Camera bounds
         this.cameras.main.setBounds(0, 0, xLimit, yLimit);

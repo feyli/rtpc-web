@@ -16,6 +16,10 @@ body {
     flex-basis: 50%;
 }
 
+#game > canvas {
+    width: 100%;
+    }
+
 #blockly {
     display: flex;
     flex-direction: column;

@@ -28,7 +28,7 @@ export default class Level1 extends BaseScene {
 
 
         // Player
-        player = this.physics.add.sprite(800, 650, 'player');
+        player = this.physics.add.sprite(100, 650, 'player');
         player.setScale(0.4);
 
         // Keyboard
@@ -64,7 +64,7 @@ export default class Level1 extends BaseScene {
 
         if (player.x > 700) {
             // Change scene
-            this.scene.start('Level4');
+            this.scene.start('Level1');
         }
     }
 }
