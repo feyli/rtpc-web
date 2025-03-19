@@ -16,7 +16,7 @@ export default class Level1 extends BaseScene {
         this.createShared();
 
         // Player
-        player = this.physics.add.sprite(0, 0, 'kidside1').setDisplayOrigin(0, 0);
+        player = this.physics.add.sprite(128, 128, 'kidside1').setDisplayOrigin(0, 0);
         player.setScale(1);
         player.setFlipX(true);
 

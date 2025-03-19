@@ -12,6 +12,7 @@ window.addEventListener('load', () => {
     width: 288,
     height: 288,
     parent: 'game',
+    pixelArt: true,
     physics: {
       default: 'arcade',
       arcade: { debug: false }
