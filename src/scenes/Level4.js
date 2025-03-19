@@ -6,16 +6,15 @@ let cursors;
 let xLimit;
 let yLimit;
 
-
-export default class Level1 extends BaseScene {
+export default class Level2s extends BaseScene {
     constructor() {
-        super('Level1');
+        super('Level4');
     }
 
     create() {
         this.createShared();
 
-        // Background
+        /// Background
         const bg = this.add.image(0, 0, 'floor').setScale(1);
         //calcule léchelle de la scène 
         const scaleX = this.scale.width / bg.width;
@@ -27,8 +26,9 @@ export default class Level1 extends BaseScene {
         xLimit = bg.displayWidth;
         yLimit = bg.displayHeight;
 
+
         // Player
-        player = this.physics.add.sprite(800, 650, 'player');
+        player = this.physics.add.sprite(400, 650, 'player');
         player.setScale(0.4);
 
         // Keyboard
@@ -36,11 +36,38 @@ export default class Level1 extends BaseScene {
 
         // Obstacles
         obstacles = this.physics.add.staticGroup();
-        obstacles.create(500, 200, 'object1');
-        obstacles.create(700, 400, 'object2');
-        obstacles.create(200, 300, 'object3');
-        obstacles.create(300, 500, 'object1');
+        obstacles.create(400, 500, 'wall3');
+        obstacles.create(400, 500, 'wall3');
+        obstacles.create(400, 500, 'wall3');
+        obstacles.angle += 90;  
         this.physics.add.collider(player, obstacles);
+
+        //map 
+        const mapData = [
+            [0, 0, 0, 0, 0, 0, 0, 0, 0],
+            [0, 1, 1, 1, 1, 1, 1, 1, 0],
+            [0, 1, 0, 0, 0, 0, 0, 1, 0],
+            [0, 1, 0, 1, 1, 1, 0, 1, 0],
+            [0, 1, 0, 1, 0, 0, 0, 1, 0],
+            [0, 1, 0, 1, 1, 1, 1, 1, 0],
+            [0, 1, 0, 0, 0, 0, 0, 0, 0],
+            [0, 1, 1, 1, 1, 1, 1, 1, 1],
+            [0, 0, 0, 0, 0, 0, 0, 0, 0]
+        ];
+
+        const tileTypes = ["rien", "wall1"];
+
+        function generateMap() {
+            const mapElement = document.getElementById("map");
+            mapElement.innerHTML = "";
+            mapData.forEach(row => {
+                row.forEach(tile => {
+                    const div = document.createElement("div");
+                    div.classList.add("tile", tileTypes[tile]);
+                    mapElement.appendChild(div);
+                });
+            });
+        }
 
         // Camera bounds
         this.cameras.main.setBounds(0, 0, xLimit, yLimit);
@@ -66,7 +93,7 @@ export default class Level1 extends BaseScene {
 
         if (player.x > 700) {
             // Change scene
-            this.scene.start('Level2');
+            this.scene.start('Level1');
         }
     }
 }

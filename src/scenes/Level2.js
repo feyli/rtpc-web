@@ -14,15 +14,22 @@ export default class Level1 extends BaseScene {
     create() {
         this.createShared();
 
-        // Background
-        const bg = this.add.image(0, 0, 'floor2').setScale(1);
+        /// Background
+        const bg = this.add.image(0, 0, 'floor').setScale(1);
+        //calcule léchelle de la scène 
+        const scaleX = this.scale.width / bg.width;
+        const scaleY = this.scale.height / bg.height;
+        const scale = Math.max(scaleX, scaleY); 
+        bg.setScale(scale);
         bg.x = bg.displayWidth / 2;
         bg.y = bg.displayHeight / 2;
         xLimit = bg.displayWidth;
         yLimit = bg.displayHeight;
 
+
         // Player
-        player = this.player;
+        player = this.physics.add.sprite(800, 650, 'player');
+        player.setScale(0.4);
 
         // Keyboard
         cursors = this.input.keyboard.createCursorKeys();
@@ -53,6 +60,11 @@ export default class Level1 extends BaseScene {
             player.setVelocityY(200);
         } else {
             player.setVelocityY(0);
+        }
+
+        if (player.x > 700) {
+            // Change scene
+            this.scene.start('Level4');
         }
     }
 }
