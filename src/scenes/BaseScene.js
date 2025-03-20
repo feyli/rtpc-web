@@ -1,4 +1,5 @@
 import Phaser from 'phaser';
+import { ee } from "../main.js";
 
 let currentInstruction = null;
 let targetX = 0;
@@ -109,6 +110,7 @@ export default class BaseScene extends Phaser.Scene {
 
     createShared() {
         window.currentScene = this.scene.key;
+        ee.emit('clearWorkspace');
         window.queue = [];
         this.add.image(0, 0, 'floor').setScale(1).setDisplayOrigin(0, 0);
         // this.add.image(0, 0, 'quadrillage').setScale(1).setOrigin(0, 0).setAlpha(0.5);
@@ -121,22 +123,22 @@ export default class BaseScene extends Phaser.Scene {
     }
 
     updateShared(player) {
-        if (player.x >= xLimit) {
+        if (player.x > xLimit) {
             player.x = xLimit;
             player.anims.stop('walk_side');
         }
 
-        else if (player.y >= yLimit) {
+        else if (player.y > yLimit) {
             player.y = yLimit;
             player.anims.stop('walk_down');
         }
 
-        else if (player.x <= 0) {
+        else if (player.x < 0) {
             player.x = 0;
             player.anims.stop('walk_side');
         }
 
-        else if (player.y <= 0) {
+        else if (player.y < 0) {
             player.y = 0;
             player.anims.stop('walk_up');
         }

@@ -13,6 +13,7 @@ export default class Preload extends BaseScene {
         this.load.image('object1', 'assets/metal_pipe.webp');
         this.load.image('object2', 'assets/metal_plate.webp');
         this.load.image('object3', 'assets/metal_can.webp');
+        this.load.image('ladder0', 'assets/ladder_step_0.webp');
         this.load.image('ladder1', 'assets/ladder_step_1.webp');
         this.load.image('ladder2', 'assets/ladder_step_2.webp');
         this.load.image('ladder3', 'assets/ladder_step_3.webp');
