@@ -9,7 +9,21 @@ import { ee } from "../src/main.js";
 
 Blockly.setLocale(Fr);
 
-const toolbox = {
+const toolbox1 = {
+    kind: 'flyoutToolbox',
+    contents: [
+        {
+            kind: 'block',
+            type: 'right'
+        },
+        {
+            kind: 'block',
+            type: 'up'
+        },
+    ]
+}
+
+const toolbox2 = {
     kind: 'flyoutToolbox',
     contents: [
         {
@@ -33,7 +47,16 @@ const toolbox = {
             type: 'controls_repeat_ext'
         }
     ]
-};
+}
+
+const toolboxes = {
+    'Level1': toolbox1,
+    'Level2': toolbox2,
+    'Level3': toolbox2,
+    'Level4': toolbox2,
+    'Level5': toolbox2,
+    'Level6': toolbox2,
+}
 
 Blockly.Blocks['left'] = {
     init: function () {
@@ -138,7 +161,7 @@ const workspace = Blockly.inject('blocklyDiv', {
     media: './node_modules/blockly/media/',
     sounds: false,
     trashcan: true,
-    toolbox
+    toolbox: toolboxes[window.currentScene || 'Level1'],
 });
 
 document.querySelector('#run').addEventListener('click', () => {
@@ -150,3 +173,8 @@ document.querySelector('#stop').addEventListener('click', () => {
     window.queue = [];
 });
 
+ee.on('clearWorkspace', () => {
+    workspace.clear();
+    window.queue = [];
+    if (workspace) workspace.updateToolbox(toolboxes[window.currentScene]);
+})
