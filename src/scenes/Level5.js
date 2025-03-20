@@ -1,11 +1,9 @@
+// filepath: /Users/mathis/Documents/dev/rtpc-web/src/scenes/Level5.js
 import BaseScene from './BaseScene.js';
 
 let player;
 let scraps;
-let cursors;
-let wall;
-const xLimit = 256;
-const yLimit = 256;
+let walls;
 
 export default class Level5 extends BaseScene {
     constructor() {
@@ -16,12 +14,8 @@ export default class Level5 extends BaseScene {
         this.createShared();
 
         // Player
-        player = this.physics.add.sprite(130, 256, 'kidback1').setDisplayOrigin(0, 0);
+        player = this.physics.add.sprite(128, 256, 'kidup1').setDisplayOrigin(0, 0);
         player.setScale(1);
-        player.setFlipX(true);
-
-        // Keyboard
-        cursors = this.input.keyboard.createCursorKeys();
 
         // Ladder
         let ladderState = 0;
@@ -29,38 +23,37 @@ export default class Level5 extends BaseScene {
         const ladder = ladderGroup.create(128, 0, 'ladder0').setDisplayOrigin(0, 0);
         ladderGroup.refresh();
 
-        //wall 
-        wall = this.physics.add.staticGroup();
+        //walls
+        walls = this.physics.add.staticGroup();
         //bas
-        wall.create(144, 240, 'wallbottom');
-        wall.create(176, 240, 'wallbottom');
-        wall.create(112, 240, 'wallbottom');
-        wall.create(80, 240, 'wallbotleft');
-        wall.create(208, 240, 'wallbotright');
+        walls.create(128, 224, 'wallbottom').setDisplayOrigin(0, 0);
+        walls.create(160, 224, 'wallbottom').setDisplayOrigin(0, 0);
+        walls.create(96, 224, 'wallbottom').setDisplayOrigin(0, 0);
+        walls.create(64, 224, 'wallbotleft').setDisplayOrigin(0, 0);
+        walls.create(192, 224, 'wallbotright').setDisplayOrigin(0, 0);
 
         
-        wall.create(144, 50, 'walltop');
-        wall.create(176, 50, 'walltop');
-        wall.create(112, 50, 'walltop');
-        wall.create(80, 50, 'wallupleft');
-        wall.create(208, 50, 'wallupright');
+        walls.create(128, 32, 'walltop').setDisplayOrigin(0, 0);
+        walls.create(160, 32, 'walltop').setDisplayOrigin(0, 0);
+        walls.create(96, 32, 'walltop').setDisplayOrigin(0, 0);
+        walls.create(64, 32, 'wallupleft').setDisplayOrigin(0, 0);
+        walls.create(192, 32, 'wallupright').setDisplayOrigin(0, 0);
 
-        for (let i = 0; i < 6; i++){
-            wall.create(144, 50+(32*i), 'wallleft');
+        for (let i = 1; i < 6; i++){
+            walls.create(128, 32+(32*i), 'wallsidecenter').setDisplayOrigin(0, 0);
         }
 
-        wall.create(14, 176, 'wallbottom');
-        wall.create(46, 176, 'wallbottom');
-        wall.create(78, 176, 'wallbotright');
+        walls.create(0, 160, 'wallbottom').setDisplayOrigin(0, 0);
+        walls.create(32, 160, 'wallbottom').setDisplayOrigin(0, 0);
+        walls.create(64, 160, 'wallbotright').setDisplayOrigin(0, 0);
 
-        wall.create(274, 176, 'wallbottom');
-        wall.create(242, 176, 'wallbottom');
-        wall.create(210, 176, 'wallbotleft');
+        walls.create(256, 160, 'wallbottom').setDisplayOrigin(0, 0);
+        walls.create(224, 160, 'wallbottom').setDisplayOrigin(0, 0);
+        walls.create(192, 160, 'wallbotleft').setDisplayOrigin(0, 0);
         
+        walls.refresh();
 
-
-        this.physics.add.collider(player, wall);
-
+        this.physics.add.collider(player, walls);
 
         // Scraps
         scraps = this.physics.add.staticGroup();
@@ -71,39 +64,23 @@ export default class Level5 extends BaseScene {
 
         scraps.refresh();
 
-        const scrapCollider = this.physics.add.collider(player, scraps, (player, scrap) => {
+        this.physics.add.overlap(player, scraps, (player, scrap) => {
+            if (player.x !== scrap.x || player.y !== scrap.y) return;
+
             scrap.destroy();
             ladder.setTexture('ladder' + ++ladderState);
         });
 
-        scrapCollider.overlapOnly = true;
+        this.physics.add.overlap(player, ladder, () => {
+            if (player.x !== ladder.x || player.y !== ladder.y) return;
 
-        const ladderCollider = this.physics.add.collider(player, ladderGroup, () => {
-            if (ladderState === 4) this.scene.start('Level4');
+            if (ladderState === 4) this.scene.start('Level6');
         })
 
-        ladderCollider.overlapOnly = true;
-
         // Camera bounds
-        this.cameras.main.setBounds(0, 0, xLimit, yLimit);
+        this.cameras.main.setBounds(0, 0, this.xLimit, this.yLimit);
+        player.setToTop();
     }
 
-    update() {
-        // Movement
-        if (cursors.left.isDown && player.x >= 0) {
-            player.setVelocityX(-200);
-        } else if (cursors.right.isDown && player.x <= xLimit) {
-            player.setVelocityX(200);
-        } else {
-            player.setVelocityX(0);
-        }
-
-        if (cursors.up.isDown && player.y >= 0) {
-            player.setVelocityY(-200);
-        } else if (cursors.down.isDown && player.y <= yLimit) {
-            player.setVelocityY(200);
-        } else {
-            player.setVelocityY(0);
-        }
-    }
+    update() { this.updateShared(player); }
 }

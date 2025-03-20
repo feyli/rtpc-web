@@ -162,6 +162,11 @@ const workspace = Blockly.inject('blocklyDiv', {
     sounds: false,
     trashcan: true,
     toolbox: toolboxes[window.currentScene || 'Level1'],
+    move: {
+        scrollbars: true,
+        drag: true,
+        wheel: true,
+    }
 });
 
 document.querySelector('#run').addEventListener('click', () => {
@@ -171,6 +176,10 @@ document.querySelector('#run').addEventListener('click', () => {
 
 document.querySelector('#stop').addEventListener('click', () => {
     window.queue = [];
+});
+
+document.querySelector('#reset').addEventListener('click', () => {
+    ee.emit('restart');
 });
 
 ee.on('clearWorkspace', () => {

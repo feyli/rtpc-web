@@ -1,30 +1,30 @@
-<html lang="en">
-
+<!doctype html>
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="./styles.css">
-
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Retrouve le tableau de Paul Cézanne !">
+    <meta name="author" content="Paul Cézanne">
+    <meta name="keywords" content="Cézanne, tableau, art, peinture">
+    <link rel="stylesheet" href="index.css">
     <title>Retrouve le tableau de Paul Cézanne !</title>
-
-    <script src="https://cdn.jsdelivr.net/npm/phaser@v3.88.1/dist/phaser.js"></script>
-    <script src="./dist/bundle.js" type="module"></script>
 </head>
 <body>
-    <div id="container">
-        <div id="game"></div>
-        <div id="blockly">
-            <nav>
-                <button id="run"><img src="medias/triangle-filled.svg" alt="triangle" style="transform: rotate(90deg);">Démarrer</button>
-                <button id="stop"><img src="medias/square-filled.svg" alt="square">Arrêter</button>
-            </nav>
-            <div id="blocklyDiv"></div>
+    <div class="container">
+        <div class="sun"></div>
+        <div class="grass"></div>
+        <header>
+            <h1>Retrouve le tableau de Paul Cézanne !</h1>
+            <p>Dans ce jeu, tu dois retrouver le tableau de Paul Cézanne en utilisant des blocs de code. Fais glisser les blocs pour créer un chemin jusqu'à l'échelle.</p>
+            <p>Attention ! L'échelle se débloque à mesure que tu récupères des débris sur ton passages.</p>
+            <a href="./game.html" class="play-button">Jouer</a>
+        </header>
+        <div class="bottom-container">
+            <img src="medias/jeune.webp" alt="Jeune portant un chapeau et regardant une carte" class="jeune">
+            <div class="carte-container">
+                <img src="medias/carte.webp" alt="Carte postale de Paul Cézanne" class="carte">
+            </div>
         </div>
     </div>
 </body>
-
 </html>
-
-
-

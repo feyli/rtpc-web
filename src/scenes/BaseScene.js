@@ -120,25 +120,23 @@ export default class BaseScene extends Phaser.Scene {
         this.anims.create(walkSideConfig);
         this.anims.create(walkUpConfig);
         this.anims.create(walkDownConfig);
+
+        ee.on('restart', () => {
+            this.scene.restart();
+        });
     }
 
     updateShared(player) {
         if (player.x > xLimit) {
             player.x = xLimit;
             player.anims.stop('walk_side');
-        }
-
-        else if (player.y > yLimit) {
+        } else if (player.y > yLimit) {
             player.y = yLimit;
             player.anims.stop('walk_down');
-        }
-
-        else if (player.x < 0) {
+        } else if (player.x < 0) {
             player.x = 0;
             player.anims.stop('walk_side');
-        }
-
-        else if (player.y < 0) {
+        } else if (player.y < 0) {
             player.y = 0;
             player.anims.stop('walk_up');
         }

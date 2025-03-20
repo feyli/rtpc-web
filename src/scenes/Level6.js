@@ -4,8 +4,6 @@ let player;
 let obstacles;
 let scraps;
 let cursors;
-let xLimit = 256;
-let yLimit = 256;
 
 export default class Level6 extends BaseScene {
     constructor() {
@@ -53,7 +51,7 @@ export default class Level6 extends BaseScene {
         obstacles.create(192, 160, 'wall').setOrigin(0, 0);
 
         obstacles.refresh();
-    
+
         this.physics.add.collider(player, obstacles);
 
         // Ladder
@@ -71,18 +69,18 @@ export default class Level6 extends BaseScene {
 
         scraps.refresh();
 
-        const scrapCollider = this.physics.add.collider(player, scraps, (player, scrap) => {
+        this.physics.add.overlap(player, scraps, (player, scrap) => {
+            if (player.x !== scrap.x || player.y !== scrap.y) return;
+
             scrap.destroy();
             ladder.setTexture('ladder' + ++ladderState);
         });
 
-        scrapCollider.overlapOnly = true;
+        this.physics.add.overlap(player, ladder, () => {
+            if (player.x !== ladder.x || player.y !== ladder.y) return;
 
-        const ladderCollider = this.physics.add.collider(player, ladderGroup, () => {
-            if (ladderState === 4) this.scene.start('Level2');
-        })
-
-        ladderCollider.overlapOnly = true;
+            if (ladderState >= 4) document.location.href = "/congrats.html";
+        });
 
         // Camera bounds
         this.cameras.main.setBounds(0, 0, this.xLimit, this.yLimit);

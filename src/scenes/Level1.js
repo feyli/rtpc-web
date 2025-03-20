@@ -2,7 +2,6 @@
 import BaseScene from './BaseScene.js';
 
 let scraps;
-let cursors;
 let player;
 
 export default class Level1 extends BaseScene {
@@ -17,9 +16,6 @@ export default class Level1 extends BaseScene {
         player = this.physics.add.sprite(2*32, 4*32, 'kidside1').setDisplayOrigin(0, 0);
         player.setScale(1);
         player.setFlipX(true);
-
-        // Keyboard
-        cursors = this.input.keyboard.createCursorKeys();
 
         // Ladder
         let ladderState = 0;
@@ -42,13 +38,11 @@ export default class Level1 extends BaseScene {
             ladder.setTexture('ladder' + ladderState);
         });
 
-        const ladderCollider = this.physics.add.overlap(player, ladder, () => {
+        this.physics.add.overlap(player, ladder, (player, ladder) => {
             if (player.x !== ladder.x || player.y !== ladder.y) return;
 
             if (ladderState === 4) this.scene.start('Level2');
         });
-
-        ladderCollider.overlapOnly = true;
 
         // Camera bounds
         this.cameras.main.setBounds(0, 0, this.xLimit, this.yLimit);
