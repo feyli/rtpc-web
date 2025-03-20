@@ -1,4 +1,5 @@
 // filepath: /Users/mathis/Documents/dev/rtpc-web/blockly/main.js
+// filepath: /Users/mathis/Documents/dev/rtpc-web/blockly/main.js
 // Import Blockly core.
 import * as Blockly from 'blockly/core';
 // Import a generator.
@@ -21,7 +22,7 @@ const toolbox1 = {
             type: 'up'
         },
     ]
-}
+};
 
 const toolbox2 = {
     kind: 'flyoutToolbox',
@@ -47,7 +48,7 @@ const toolbox2 = {
             type: 'controls_repeat_ext'
         }
     ]
-}
+};
 
 const toolboxes = {
     'Level1': toolbox1,
@@ -56,7 +57,7 @@ const toolboxes = {
     'Level4': toolbox2,
     'Level5': toolbox2,
     'Level6': toolbox2,
-}
+};
 
 Blockly.Blocks['left'] = {
     init: function () {
@@ -155,7 +156,7 @@ javascriptGenerator.forBlock['controls_repeat_ext'] = function (block) {
     }
 
     return code;
-}
+};
 
 const workspace = Blockly.inject('blocklyDiv', {
     media: './node_modules/blockly/media/',
@@ -185,5 +186,17 @@ document.querySelector('#reset').addEventListener('click', () => {
 ee.on('clearWorkspace', () => {
     workspace.clear();
     window.queue = [];
-    if (workspace) workspace.updateToolbox(toolboxes[window.currentScene]);
-})
+    if (window.currentScene && toolboxes[window.currentScene]) {
+        workspace.updateToolbox(toolboxes[window.currentScene]);
+    }
+});
+
+function switchLevel(level) {
+    window.currentScene = 'Level' + level;
+    ee.emit('restart');
+    if (window.currentScene && toolboxes[window.currentScene]) {
+        workspace.updateToolbox(toolboxes[window.currentScene]);
+    }
+}
+
+window.switchLevel = switchLevel;

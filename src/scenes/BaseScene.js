@@ -109,8 +109,10 @@ export default class BaseScene extends Phaser.Scene {
     yLimit;
 
     createShared() {
-        window.currentScene = this.scene.key;
-        ee.emit('clearWorkspace');
+        if (window.currentScene !== this.scene.key) {
+            window.currentScene = this.scene.key;
+            ee.emit('clearWorkspace');
+        }
         window.queue = [];
         this.add.image(0, 0, 'floor').setScale(1).setDisplayOrigin(0, 0);
         // this.add.image(0, 0, 'quadrillage').setScale(1).setOrigin(0, 0).setAlpha(0.5);
@@ -122,7 +124,9 @@ export default class BaseScene extends Phaser.Scene {
         this.anims.create(walkDownConfig);
 
         ee.on('restart', () => {
-            this.scene.restart();
+            window.queue = null;
+            currentInstruction = null;
+            this.scene.start(window.currentScene);
         });
     }
 
