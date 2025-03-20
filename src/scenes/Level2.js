@@ -26,17 +26,17 @@ export default class Level2 extends BaseScene {
 
         // Obstacles
         obstacles = this.physics.add.staticGroup();
-        obstacles.create(0, 128, 'hollwallbottop').setOrigin(0, 0);
+        obstacles.create(0, 128, 'wallsideleft').setOrigin(0, 0);
         obstacles.create(32, 128, 'hollwallbotright').setOrigin(0, 0);
-        obstacles.create(32, 96, 'hollwallright').setOrigin(0, 0);
-        obstacles.create(96, 0, 'hollwallright').setOrigin(0, 0);
+        obstacles.create(32, 96, 'wallsidetop').setOrigin(0, 0);
+        obstacles.create(96, 0, 'wallsidetop').setOrigin(0, 0);
         obstacles.create(96, 32, 'hollwallbotleft').setOrigin(0, 0);
-        obstacles.create(128, 32, 'hollwallbottop').setOrigin(0, 0);
-        obstacles.create(256, 64, 'hollwallbottop').setOrigin(0, 0);
+        obstacles.create(128, 32, 'wallsideright').setOrigin(0, 0);
+        obstacles.create(256, 64, 'wallsideright').setOrigin(0, 0);
         obstacles.create(224, 64, 'hollwallupleft').setOrigin(0, 0);
-        obstacles.create(224, 96, 'hollwallright').setOrigin(0, 0);
-        obstacles.create(224, 224, 'hollwallright').setOrigin(0, 0);
-        obstacles.create(224, 256, 'hollwallright').setOrigin(0, 0);
+        obstacles.create(224, 96, 'wallsidebot').setOrigin(0, 0);
+        obstacles.create(224, 224, 'wallsidetop').setOrigin(0, 0);
+        obstacles.create(224, 256, 'wallsidebot').setOrigin(0, 0);
         obstacles.refresh();
     
         this.physics.add.collider(player, obstacles);

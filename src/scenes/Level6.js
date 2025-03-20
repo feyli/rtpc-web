@@ -7,16 +7,16 @@ let cursors;
 let xLimit = 256;
 let yLimit = 256;
 
-export default class Level3 extends BaseScene {
+export default class Level6 extends BaseScene {
     constructor() {
-        super('Level3');
+        super('Level6');
     }
 
     create() {
         this.createShared();
 
         // Player
-        player = this.physics.add.sprite(0, 256, 'kidside1').setDisplayOrigin(0, 0);
+        player = this.physics.add.sprite(96, 256, 'kidside1').setDisplayOrigin(0, 0);
         player.setScale(1);
         player.setFlipX(true);
 
@@ -30,20 +30,28 @@ export default class Level3 extends BaseScene {
         obstacles.create(96, 32, 'hollwallbottop').setOrigin(0, 0);
         obstacles.create(128, 32, 'hollwallbottop').setOrigin(0, 0);
         obstacles.create(160, 32, 'hollwallbottop').setOrigin(0, 0);
-        obstacles.create(192, 32, 'hollwallbottop').setOrigin(0, 0);
-        obstacles.create(224, 32, 'hollwallbottop').setOrigin(0, 0);
-        obstacles.create(256, 32, 'wallsideright').setOrigin(0, 0);
-        obstacles.create(0, 128, 'wallsideleft').setOrigin(0, 0);
-        obstacles.create(32, 128, 'hollwallbottop').setOrigin(0, 0);
-        obstacles.create(64, 128, 'hollwallbottop').setOrigin(0, 0);
-        obstacles.create(96, 128, 'hollwallbottop').setOrigin(0, 0);
-        obstacles.create(128, 128, 'hollwallbottop').setOrigin(0, 0);
-        obstacles.create(160, 128, 'wallsideright').setOrigin(0, 0);
-        obstacles.create(128, 224, 'wallsideleft').setOrigin(0, 0);
+        obstacles.create(192, 32, 'hollwallbotright').setOrigin(0, 0);
+        obstacles.create(192, 0, 'wallsidetop').setOrigin(0, 0);
+
+        obstacles.create(64, 256, 'wallsidebot').setOrigin(0, 0);
+        obstacles.create(64, 224, 'hollwallupleft').setOrigin(0, 0);
+        obstacles.create(96, 224, 'hollwallbottop').setOrigin(0, 0);
+        obstacles.create(128, 224, 'hollwallbottop').setOrigin(0, 0);
         obstacles.create(160, 224, 'hollwallbottop').setOrigin(0, 0);
-        obstacles.create(192, 224, 'hollwallbottop').setOrigin(0, 0);
-        obstacles.create(224, 224, 'hollwallbottop').setOrigin(0, 0);
-        obstacles.create(256, 224, 'wallsideright').setOrigin(0, 0);
+        obstacles.create(192, 224, 'wallsideright').setOrigin(0, 0);
+
+        obstacles.create(64, 96, 'wall').setOrigin(0, 0);
+        obstacles.create(128, 96, 'wallsidetop').setOrigin(0, 0);
+        obstacles.create(192, 96, 'wall').setOrigin(0, 0);
+
+        obstacles.create(96, 128, 'wallsideleft').setOrigin(0, 0);
+        obstacles.create(128, 128, 'wallsidecenter').setOrigin(0, 0);
+        obstacles.create(160, 128, 'wallsideright').setOrigin(0, 0);
+
+        obstacles.create(64, 160, 'wall').setOrigin(0, 0);
+        obstacles.create(128, 160, 'wallsidebot').setOrigin(0, 0);
+        obstacles.create(192, 160, 'wall').setOrigin(0, 0);
+
         obstacles.refresh();
     
         this.physics.add.collider(player, obstacles);
@@ -51,15 +59,15 @@ export default class Level3 extends BaseScene {
         // Ladder
         let ladderState = 0;
         const ladderGroup = this.physics.add.staticGroup();
-        const ladder = ladderGroup.create(256, 0, 'ladder0').setDisplayOrigin(0, 0);
+        const ladder = ladderGroup.create(160, 0, 'ladder0').setDisplayOrigin(0, 0);
         ladderGroup.refresh();
 
         // Scraps
         scraps = this.physics.add.staticGroup();
-        scraps.create(192, 64, 'object1').setDisplayOrigin(0, 0);
-        scraps.create(0, 96, 'object2').setDisplayOrigin(0, 0);
-        scraps.create(194, 160, 'object3').setDisplayOrigin(0, 0);
-        scraps.create(256, 256, 'object1').setDisplayOrigin(0, 0);
+        scraps.create(256, 0, 'object1').setDisplayOrigin(0, 0);
+        scraps.create(96, 96, 'object2').setDisplayOrigin(0, 0);
+        scraps.create(160, 160, 'object3').setDisplayOrigin(0, 0);
+        scraps.create(0, 256, 'object1').setDisplayOrigin(0, 0);
 
         scraps.refresh();
 
