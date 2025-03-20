@@ -39,6 +39,8 @@ export default class Preload extends BaseScene {
         this.load.image('wallright', 'assets/wall_right.webp');
         this.load.image('walltop', 'assets/wall_top.webp');
         this.load.image('wallbottom', 'assets/wall_bottom.webp');
+        this.load.image('wallcenter', 'assets/wall_center.webp');
+        this.load.image('wall', 'assets/wall.webp');
         this.load.image('hollwallbotleft', 'assets/wall_hollow_bottom_left.webp');
         this.load.image('hollwallbotright', 'assets/wall_hollow_bottom_right.webp');
         this.load.image('hollwallupleft', 'assets/wall_hollow_top_left.webp');
@@ -46,6 +48,11 @@ export default class Preload extends BaseScene {
         this.load.image('hollwallleft', 'assets/wall_hollow_left.webp');
         this.load.image('hollwallright', 'assets/wall_hollow_right.webp');
         this.load.image('hollwallbottop', 'assets/wall_hollow_bottop.webp');
+        this.load.image('wallsidebot', 'assets/wall_side_bottom.webp');
+        this.load.image('wallsidecenter', 'assets/wall_side_center.webp');
+        this.load.image('wallsideleft', 'assets/wall_side_left.webp');
+        this.load.image('wallsideright', 'assets/wall_side_right.webp');
+        this.load.image('wallsidetop', 'assets/wall_side_top.webp');
     }
 
     create() {
