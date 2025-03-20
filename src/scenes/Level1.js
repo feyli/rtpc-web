@@ -55,5 +55,5 @@ export default class Level1 extends BaseScene {
         player.setToTop();
     }
 
-    update() { this.updateShared(player) };
+    update() { this.updateShared(player); };
 }
