@@ -1,3 +1,7 @@
+* {
+    z-index: 100;
+}
+
 body, html {
     height: 100%;
     width: 100%;
@@ -36,6 +40,7 @@ body, html {
     height: 256px;
     border-radius: 100% 100% 0 0;
     background: linear-gradient(to bottom, #5DE65E, #5CEA5B);
+    z-index: 10;
 }
 
 header {
@@ -48,6 +53,7 @@ header {
     flex-basis: 30%;
     justify-content: center;
     align-items: center;
+    z-index: 150;
 }
 
 header h1 {
