@@ -7,16 +7,16 @@ let wall;
 const xLimit = 256;
 const yLimit = 256;
 
-export default class Level4 extends BaseScene {
+export default class Level5 extends BaseScene {
     constructor() {
-        super('Level4');
+        super('Level5');
     }
 
     create() {
         this.createShared();
 
         // Player
-        player = this.physics.add.sprite(256, 256, 'kidside1').setDisplayOrigin(0, 0);
+        player = this.physics.add.sprite(130, 256, 'kidback1').setDisplayOrigin(0, 0);
         player.setScale(1);
         player.setFlipX(true);
 
@@ -26,55 +26,48 @@ export default class Level4 extends BaseScene {
         // Ladder
         let ladderState = 0;
         const ladderGroup = this.physics.add.staticGroup();
-        const ladder = ladderGroup.create(128, 128, 'ladder0').setDisplayOrigin(0, 0);
+        const ladder = ladderGroup.create(128, 0, 'ladder0').setDisplayOrigin(0, 0);
         ladderGroup.refresh();
 
         //wall 
         wall = this.physics.add.staticGroup();
-        //wall.create(112, 144, 'wallbottom');
-
-        for (let i = 0; i < 7; i++){
-            wall.create(270-(32*i), 240, 'wallbottom');
-        }
-
-        for (let i = 0; i < 5; i++){
-            wall.create(46, 208-(32*i), 'wallleft');
-        }
-
-        for (let i = 0; i < 5; i++){
-            wall.create(78+(32*i), 50, 'walltop');
-        }
-
-        for (let i = 0; i < 3; i++){
-            wall.create(236, 80+(32*i), 'wallright');
-        }
-
-        for (let i = 0; i < 3; i++){
-            wall.create(210-(32*i), 176, 'wallbottom');
-        }
-
-        for (let i = 0; i < 2; i++){
-            wall.create(115, 146-(32*i), 'wallleft');
-        }
-
-        wall.create(46, 240, 'wallbotleft');
-        wall.create(46, 50, 'wallupleft');
-        wall.create(236, 50, 'wallupright');
-        wall.create(236, 176, 'wallbotright');
-        wall.create(115, 176, 'wallbotleft');
-
+        //bas
+        wall.create(144, 240, 'wallbottom');
+        wall.create(176, 240, 'wallbottom');
+        wall.create(112, 240, 'wallbottom');
+        wall.create(80, 240, 'wallbotleft');
+        wall.create(208, 240, 'wallbotright');
 
         
+        wall.create(144, 50, 'walltop');
+        wall.create(176, 50, 'walltop');
+        wall.create(112, 50, 'walltop');
+        wall.create(80, 50, 'wallupleft');
+        wall.create(208, 50, 'wallupright');
+
+        for (let i = 0; i < 6; i++){
+            wall.create(144, 50+(32*i), 'wallleft');
+        }
+
+        wall.create(14, 176, 'wallbottom');
+        wall.create(46, 176, 'wallbottom');
+        wall.create(78, 176, 'wallbotright');
+
+        wall.create(274, 176, 'wallbottom');
+        wall.create(242, 176, 'wallbottom');
+        wall.create(210, 176, 'wallbotleft');
         
+
+
         this.physics.add.collider(player, wall);
 
 
         // Scraps
         scraps = this.physics.add.staticGroup();
-        scraps.create(0, 256, 'object1').setDisplayOrigin(0, 0);
-        scraps.create(64, 192, 'object2').setDisplayOrigin(0, 0);
-        scraps.create(192, 128, 'object3').setDisplayOrigin(0, 0);
-        scraps.create(256, 192, 'object1').setDisplayOrigin(0, 0);
+        scraps.create(0, 128, 'object1').setDisplayOrigin(0, 0);
+        scraps.create(96, 0, 'object2').setDisplayOrigin(0, 0);
+        scraps.create(160, 0, 'object3').setDisplayOrigin(0, 0);
+        scraps.create(256, 128, 'object1').setDisplayOrigin(0, 0);
 
         scraps.refresh();
 
@@ -86,7 +79,7 @@ export default class Level4 extends BaseScene {
         scrapCollider.overlapOnly = true;
 
         const ladderCollider = this.physics.add.collider(player, ladderGroup, () => {
-            if (ladderState === 4) this.scene.start('Level5');
+            if (ladderState === 4) this.scene.start('Level4');
         })
 
         ladderCollider.overlapOnly = true;
