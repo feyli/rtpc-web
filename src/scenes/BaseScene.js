@@ -115,7 +115,6 @@ export default class BaseScene extends Phaser.Scene {
         }
         window.queue = [];
         this.add.image(0, 0, 'floor').setScale(1).setDisplayOrigin(0, 0);
-        // this.add.image(0, 0, 'quadrillage').setScale(1).setOrigin(0, 0).setAlpha(0.5);
         this.add.grid(0, 0, 288, 288, 32, 32, null, 0, 0x305C03, 0.5).setOrigin(0, 0);
 
         // Configure animations
@@ -130,7 +129,7 @@ export default class BaseScene extends Phaser.Scene {
         });
     }
 
-    updateShared(player) {
+    updateShared(player, walls) {
         if (player.x > xLimit) {
             player.x = xLimit;
             player.anims.stop('walk_side');
@@ -183,48 +182,81 @@ export default class BaseScene extends Phaser.Scene {
         }
 
         switch (currentInstruction) {
-            case 'up':
-                if (player.y > targetY) {
-                    player.y--;
-                } else {
+            case 'up': {
+                let oldY = player.y;
+                player.y--;
+                if (this.physics.overlap(player, walls)) {
+                    player.y = Math.round(oldY / 32) * 32;
+                    player.anims.stop('walk_up');
+                    currentInstruction = null;
+                    lastInstructionTime = this.time.now;
+                    player.setTexture('kidup1');
+                    break;
+                }
+                if (player.y <= targetY) {
                     player.anims.stop('walk_up');
                     lastInstructionTime = this.time.now;
                     currentInstruction = null;
                     player.setTexture('kidup1');
                 }
+            }
                 break;
-
-            case 'right':
-                if (player.x < targetX) {
-                    player.x++;
-                } else {
+            case 'right': {
+                let oldX = player.x;
+                player.x++;
+                if (this.physics.overlap(player, walls)) {
+                    player.x = Math.round(oldX / 32) * 32;
+                    player.anims.stop('walk_side');
+                    currentInstruction = null;
+                    lastInstructionTime = this.time.now;
+                    player.setTexture('kidside1');
+                    break;
+                }
+                if (player.x >= targetX) {
                     player.anims.stop('walk_side');
                     lastInstructionTime = this.time.now;
                     currentInstruction = null;
                     player.setTexture('kidside1');
                 }
+            }
                 break;
-
-            case 'down':
-                if (player.y < targetY) {
-                    player.y++;
-                } else {
+            case 'down': {
+                let oldY = player.y;
+                player.y++;
+                if (this.physics.overlap(player, walls)) {
+                    player.y = Math.round(oldY / 32) * 32;
+                    player.anims.stop('walk_down');
+                    currentInstruction = null;
+                    lastInstructionTime = this.time.now;
+                    player.setTexture('kiddown1');
+                    break;
+                }
+                if (player.y >= targetY) {
                     player.anims.stop('walk_down');
                     lastInstructionTime = this.time.now;
                     currentInstruction = null;
                     player.setTexture('kiddown1');
                 }
+            }
                 break;
-
-            case 'left':
-                if (player.x > targetX) {
-                    player.x--;
-                } else {
+            case 'left': {
+                let oldX = player.x;
+                player.x--;
+                if (this.physics.overlap(player, walls)) {
+                    player.x = Math.round(oldX / 32) * 32;
+                    player.anims.stop('walk_side');
+                    currentInstruction = null;
+                    lastInstructionTime = this.time.now;
+                    player.setTexture('kidside1');
+                    break;
+                }
+                if (player.x <= targetX) {
                     player.anims.stop('walk_side');
                     lastInstructionTime = this.time.now;
                     currentInstruction = null;
                     player.setTexture('kidside1');
                 }
+            }
                 break;
 
             default:

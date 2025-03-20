@@ -69,5 +69,5 @@ export default class Level3 extends BaseScene {
         player.setToTop();
     }
 
-    update() { this.updateShared(player) };
+    update() { this.updateShared(player, walls) };
 }

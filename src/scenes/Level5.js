@@ -1,4 +1,5 @@
 // filepath: /Users/mathis/Documents/dev/rtpc-web/src/scenes/Level5.js
+// filepath: /Users/mathis/Documents/dev/rtpc-web/src/scenes/Level5.js
 import BaseScene from './BaseScene.js';
 
 let player;
@@ -82,5 +83,8 @@ export default class Level5 extends BaseScene {
         player.setToTop();
     }
 
-    update() { this.updateShared(player); }
+    update() {
+        this.updateShared(player, walls);
+    }
 }
+

@@ -1,9 +1,9 @@
+// filepath: /Users/mathis/Documents/dev/rtpc-web/src/scenes/Level6.js
 import BaseScene from './BaseScene.js';
 
 let player;
-let obstacles;
+let walls;
 let scraps;
-let cursors;
 
 export default class Level6 extends BaseScene {
     constructor() {
@@ -18,41 +18,37 @@ export default class Level6 extends BaseScene {
         player.setScale(1);
         player.setFlipX(true);
 
-
-        // Keyboard
-        cursors = this.input.keyboard.createCursorKeys();
-
         // Obstacles
-        obstacles = this.physics.add.staticGroup();
-        obstacles.create(64, 32, 'wallsideleft').setOrigin(0, 0);
-        obstacles.create(96, 32, 'hollwallbottop').setOrigin(0, 0);
-        obstacles.create(128, 32, 'hollwallbottop').setOrigin(0, 0);
-        obstacles.create(160, 32, 'hollwallbottop').setOrigin(0, 0);
-        obstacles.create(192, 32, 'hollwallbotright').setOrigin(0, 0);
-        obstacles.create(192, 0, 'wallsidetop').setOrigin(0, 0);
+        walls = this.physics.add.staticGroup();
+        walls.create(64, 32, 'wallsideleft').setOrigin(0, 0);
+        walls.create(96, 32, 'hollwallbottop').setOrigin(0, 0);
+        walls.create(128, 32, 'hollwallbottop').setOrigin(0, 0);
+        walls.create(160, 32, 'hollwallbottop').setOrigin(0, 0);
+        walls.create(192, 32, 'hollwallbotright').setOrigin(0, 0);
+        walls.create(192, 0, 'wallsidetop').setOrigin(0, 0);
 
-        obstacles.create(64, 256, 'wallsidebot').setOrigin(0, 0);
-        obstacles.create(64, 224, 'hollwallupleft').setOrigin(0, 0);
-        obstacles.create(96, 224, 'hollwallbottop').setOrigin(0, 0);
-        obstacles.create(128, 224, 'hollwallbottop').setOrigin(0, 0);
-        obstacles.create(160, 224, 'hollwallbottop').setOrigin(0, 0);
-        obstacles.create(192, 224, 'wallsideright').setOrigin(0, 0);
+        walls.create(64, 256, 'wallsidebot').setOrigin(0, 0);
+        walls.create(64, 224, 'hollwallupleft').setOrigin(0, 0);
+        walls.create(96, 224, 'hollwallbottop').setOrigin(0, 0);
+        walls.create(128, 224, 'hollwallbottop').setOrigin(0, 0);
+        walls.create(160, 224, 'hollwallbottop').setOrigin(0, 0);
+        walls.create(192, 224, 'wallsideright').setOrigin(0, 0);
 
-        obstacles.create(64, 96, 'wall').setOrigin(0, 0);
-        obstacles.create(128, 96, 'wallsidetop').setOrigin(0, 0);
-        obstacles.create(192, 96, 'wall').setOrigin(0, 0);
+        walls.create(64, 96, 'wall').setOrigin(0, 0);
+        walls.create(128, 96, 'wallsidetop').setOrigin(0, 0);
+        walls.create(192, 96, 'wall').setOrigin(0, 0);
 
-        obstacles.create(96, 128, 'wallsideleft').setOrigin(0, 0);
-        obstacles.create(128, 128, 'wallsidecenter').setOrigin(0, 0);
-        obstacles.create(160, 128, 'wallsideright').setOrigin(0, 0);
+        walls.create(96, 128, 'wallsideleft').setOrigin(0, 0);
+        walls.create(128, 128, 'wallsidecenter').setOrigin(0, 0);
+        walls.create(160, 128, 'wallsideright').setOrigin(0, 0);
 
-        obstacles.create(64, 160, 'wall').setOrigin(0, 0);
-        obstacles.create(128, 160, 'wallsidebot').setOrigin(0, 0);
-        obstacles.create(192, 160, 'wall').setOrigin(0, 0);
+        walls.create(64, 160, 'wall').setOrigin(0, 0);
+        walls.create(128, 160, 'wallsidebot').setOrigin(0, 0);
+        walls.create(192, 160, 'wall').setOrigin(0, 0);
 
-        obstacles.refresh();
+        walls.refresh();
 
-        this.physics.add.collider(player, obstacles);
+        this.physics.add.collider(player, walls);
 
         // Ladder
         let ladderState = 0;
@@ -87,5 +83,7 @@ export default class Level6 extends BaseScene {
         player.setToTop();
     }
 
-    update() { this.updateShared(player) };
+    update() {
+        this.updateShared(player, walls);
+    }
 }
