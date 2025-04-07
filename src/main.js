@@ -20,7 +20,8 @@ window.addEventListener('load', () => {
       default: 'arcade',
       arcade: { debug: false }
     },
-    scene: [Preload, Level1, Level2, Level3, Level4, Level5, Level6]
+    scene: [Preload, Level1, Level2, Level3, Level4, Level5, Level6],
+    powerPreference: 'high-performance'
   };
   new Phaser.Game(config);
 });
