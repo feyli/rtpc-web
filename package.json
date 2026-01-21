@@ -15,6 +15,8 @@
   "type": "module",
   "private": "true",
   "scripts": {
+    "build": "webpack --mode production",
+    "dev": "webpack serve --mode development",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "dependencies": {
